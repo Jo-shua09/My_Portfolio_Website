@@ -1,73 +1,126 @@
-# Welcome to your Lovable project
+# Joshua Onyeka - Portfolio
 
-## Project info
+A modern, responsive personal portfolio website showcasing my work as a software developer. Built with React, TypeScript, and Tailwind CSS for a sleek and interactive user experience.
 
-**URL**: https://lovable.dev/projects/3e2a4e7b-e01f-4ee0-8e05-68efa738e7c9
+## 🚀 Features
 
-## How can I edit this code?
+- **Responsive Design**: Optimized for all devices and screen sizes
+- **Modern UI**: Clean, professional design with smooth animations
+- **Interactive Elements**: Hover effects, transitions, and dynamic layouts
+- **SEO Optimized**: Comprehensive meta tags for better search engine visibility
+- **Fast Performance**: Built with Vite for optimal loading speeds
+- **TypeScript**: Type-safe development for better code quality
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+- **Frontend**: React 18, TypeScript
+- **Styling**: Tailwind CSS, Shadcn/ui components
+- **Build Tool**: Vite
+- **Animations**: GSAP, CSS animations
+- **Icons**: Lucide React, React Icons
+- **Routing**: React Router DOM
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3e2a4e7b-e01f-4ee0-8e05-68efa738e7c9) and start prompting.
+## 📁 Project Structure
 
-Changes made via Lovable will be committed automatically to this repo.
+```
+src/
+├── assets/
+│   ├── data/
+│   │   ├── Projects.ts    # Project portfolio data
+│   │   └── Services.ts    # Services offered
+│   └── images/            # Static images and logos
+├── components/
+│   ├── ui/                # Reusable UI components
+│   ├── Navigation.tsx     # Main navigation
+│   ├── Footer.tsx         # Site footer
+│   ├── ProjectCard.tsx    # Project display card
+│   └── ServiceCard.tsx    # Service display card
+├── pages/
+│   ├── Home.tsx           # Landing page
+│   ├── About.tsx          # About me section
+│   ├── Portfolio.tsx      # Projects showcase
+│   ├── Services.tsx       # Services offered
+│   └── Contact.tsx        # Contact information
+└── lib/
+    ├── gsap.ts           # Animation utilities
+    └── utils.ts          # Helper functions
+```
 
-**Use your preferred IDE**
+## 🏃‍♂️ Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (v18 or higher)
+- npm or yarn
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Clone the repository:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+git clone https://github.com/Jo-shua09/My_Portfolio_Website.git
+cd My_Portfolio_Website
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. Install dependencies:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📱 Pages
 
-## What technologies are used for this project?
+- **Home**: Hero section, featured projects, services overview
+- **About**: Personal background and skills
+- **Portfolio**: Complete project showcase with alternating layouts
+- **Services**: Detailed service offerings
+- **Contact**: Contact form and information
 
-This project is built with:
+## 🎨 Design Features
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Alternating Project Layouts**: Projects display with image-text alternation on desktop
+- **Smooth Animations**: GSAP-powered transitions and effects
+- **Dark Theme**: Modern dark color scheme
+- **Mobile-First**: Responsive design that works on all devices
+- **Accessibility**: Proper ARIA labels and keyboard navigation
 
-## How can I deploy this project?
+## 🔧 Available Scripts
 
-Simply open [Lovable](https://lovable.dev/projects/3e2a4e7b-e01f-4ee0-8e05-68efa738e7c9) and click on Share -> Publish.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build for development
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-## Can I connect a custom domain to my Lovable project?
+## 🌐 Deployment
 
-Yes, you can!
+This project is configured for deployment on Vercel. The live version is available at [https://joshwebfolio.vercel.app](https://joshwebfolio.vercel.app).
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📞 Contact
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- **Email**: [Your email here]
+- **LinkedIn**: [Your LinkedIn profile]
+- **GitHub**: [https://github.com/Jo-shua09](https://github.com/Jo-shua09)
+- **Portfolio**: [https://joshwebfolio.vercel.app](https://joshwebfolio.vercel.app)
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+Built with ❤️ by Joshua Onyeka
