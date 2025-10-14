@@ -24,33 +24,6 @@ const About = () => {
     },
   ];
 
-  const team = [
-    {
-      name: "Sarah Chen",
-      role: "CEO & Lead Architect",
-      bio: "15+ years building scalable systems for Fortune 500 companies",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
-    },
-    {
-      name: "Marcus Rodriguez",
-      role: "CTO & Full-Stack Lead",
-      bio: "Former tech lead at major SaaS companies, expert in cloud architecture",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
-    },
-    {
-      name: "Emily Watson",
-      role: "Head of Design",
-      bio: "Award-winning designer specializing in user-centered digital experiences",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
-    },
-    {
-      name: "David Kim",
-      role: "DevOps Engineer",
-      bio: "Infrastructure specialist with expertise in AWS, Azure, and Kubernetes",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
