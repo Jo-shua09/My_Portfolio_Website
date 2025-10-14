@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 interface ProjectCardProps {
   id: string;
@@ -20,7 +21,7 @@ const ProjectCard = ({ id, title, description, image, tags, category }: ProjectC
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
 
           <div className="absolute top-4 left-4 w-10 h-10 bg-primary/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-            <Github className="w-5 h-5 hover:scale-110 text-primary-foreground" />
+            <FaGithub className="w-5 h-5 hover:scale-110 text-primary-foreground" />
           </div>
 
           <div className="absolute top-4 right-4 w-10 h-10 bg-primary/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
