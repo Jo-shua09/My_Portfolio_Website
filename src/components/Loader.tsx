@@ -24,7 +24,7 @@ const Loader = () => {
 
         {/* Loading text */}
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-foreground mb-2">Welcome</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-2">Hello There,</h2>
           <div className="flex space-x-1 justify-center">
             <div className="w-2 h-2 bg-primary rounded-full animate-bounce"></div>
             <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: "0.1s" }}></div>
