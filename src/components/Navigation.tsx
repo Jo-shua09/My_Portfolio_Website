@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Cog, Briefcase, User, Mail, Download } from "lucide-react";
+import { Home, Cog, Briefcase, User, Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import logo from "@/assets/images/logo-bg.png";

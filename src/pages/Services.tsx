@@ -1,4 +1,3 @@
-import { Code2, Smartphone, Cloud, Palette, Database, Shield, Zap, Settings } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
@@ -7,82 +6,9 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
+import { services, techStack } from "@/assets/data/Services";
 
 const Services = () => {
-  const services = [
-    {
-      icon: Code2,
-      title: "Full-Stack Development",
-      description:
-        "End-to-end web applications with React, Next.js, Node.js, and modern frameworks. Scalable architecture designed for performance and maintainability.",
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description:
-        "Native iOS and Android apps, plus React Native and Flutter cross-platform solutions. Smooth, intuitive experiences that users love.",
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Solutions",
-      description: "AWS, Azure, and GCP infrastructure setup, migration, and optimization. Serverless architectures and microservices expertise.",
-    },
-    {
-      icon: Palette,
-      title: "UI/UX Design",
-      description:
-        "User-centered design that balances aesthetics with functionality. Figma prototypes, design systems, and conversion-optimized interfaces.",
-    },
-    {
-      icon: Database,
-      title: "Database Architecture",
-      description: "PostgreSQL, MongoDB, Redis, and more. Efficient schema design, query optimization, and data migration strategies.",
-    },
-    {
-      icon: Shield,
-      title: "Security & Compliance",
-      description: "Penetration testing, security audits, and compliance with GDPR, HIPAA, and industry standards. Protecting your data and users.",
-    },
-    {
-      icon: Zap,
-      title: "Performance Optimization",
-      description: "Speed is critical. We optimize every layer—from frontend bundle sizes to backend query performance and CDN configuration.",
-    },
-    {
-      icon: Settings,
-      title: "DevOps & CI/CD",
-      description:
-        "Automated deployment pipelines, infrastructure as code, and monitoring solutions. Docker, Kubernetes, and modern DevOps practices.",
-    },
-  ];
-
-  const techStack = [
-    "React",
-    "Next.js",
-    "Vue.js",
-    "Angular",
-    "TypeScript",
-    "Node.js",
-    "Python",
-    "PHP",
-    "React Native",
-    "Flutter",
-    "Swift",
-    "Kotlin",
-    "AWS",
-    "Azure",
-    "GCP",
-    "Docker",
-    "Kubernetes",
-    "PostgreSQL",
-    "MongoDB",
-    "Redis",
-    "GraphQL",
-    "REST API",
-    "Figma",
-    "Adobe XD",
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -134,7 +60,7 @@ const Services = () => {
           >
             {services.map((service, index) => (
               <SwiperSlide key={service.title}>
-                <ServiceCard {...service} delay={index * 50} index={index} />
+                <ServiceCard {...service} delay={index * 50} />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -179,8 +105,11 @@ const Services = () => {
           >
             {techStack.map((tech, index) => (
               <SwiperSlide key={index}>
-                <div className="flex-shrink-0 px-8 md:px-6 py-3 flex items-center justify-center bg-secondary border border-border rounded-full text-nowrap text-foreground font-medium whitespace-nowrap text-center">
-                  {tech}
+                <div className="p-3 bg-card rounded-xl border-border hover:border-primary transition-all duration-300 hover-lift text-center">
+                  <div className="flex flex-col items-center gap-2">
+                    {tech.name}
+                    <img src={tech.img} alt="stack image" className="w-12 h-12 object-contain" />
+                  </div>
                 </div>
               </SwiperSlide>
             ))}

@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { techStack } from "@/assets/data/Services";
 
 const About = () => {
   const values = [
@@ -196,19 +197,16 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {[
-              "React & Next.js",
-              "Node.js & Express",
-              "TypeScript",
-              "PostgreSQL & MongoDB",
-              "AWS & Cloud",
-              "UI/UX Design",
-              "Mobile Development",
-              "DevOps & CI/CD",
-            ].map((skill, index) => (
-              <Card key={skill} className="p-6 bg-card border-border hover:border-primary transition-all duration-300 hover-lift text-center">
-                <p className="text-foreground font-medium">{skill}</p>
-              </Card>
+            {techStack.map((tech, index) => (
+              <div
+                key={index}
+                className="p-3 bg-card rounded-xl border-border hover:border-primary transition-all duration-300 hover-lift text-center"
+              >
+                <div className="flex flex-col items-center gap-2">
+                  {tech.name}
+                  <img src={tech.img} alt="stack image" className="w-12 h-12 object-contain" />
+                </div>
+              </div>
             ))}
           </div>
         </div>

@@ -6,10 +6,10 @@ interface ServiceCardProps {
   title: string;
   description: string;
   delay?: number;
-  index: number;
+  status?: string;
 }
 
-const ServiceCard = ({ icon: Icon, title, description, delay = 0, index }: ServiceCardProps) => {
+const ServiceCard = ({ icon: Icon, title, description, delay = 0, status }: ServiceCardProps) => {
   return (
     <Card
       className="group relative p-5 md:p-8 bg-card border-border hover:border-primary transition-all duration-500 hover-lift overflow-hidden"
@@ -25,11 +25,7 @@ const ServiceCard = ({ icon: Icon, title, description, delay = 0, index }: Servi
         <h3 className="text-xl font-bold text-foreground mb-3">{title}</h3>
         <p className="text-muted-foreground leading-relaxed">{description}</p>
 
-        <div className="mt-6 flex items-center text-primary font-medium group-hover:translate-x-2 transition-transform duration-300">
-          {index == 0 && "Active"}
-          {index == 1 && "In Progress"}
-          {index == 2 && "Soon"}
-        </div>
+        <div className="mt-6 flex items-center text-primary font-medium group-hover:translate-x-2 transition-transform duration-300">{status}</div>
       </div>
     </Card>
   );

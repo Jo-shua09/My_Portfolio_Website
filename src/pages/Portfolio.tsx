@@ -2,63 +2,12 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
-import { Button } from "@/components/ui/button";
+import { projects } from "@/assets/data/Projects";
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
   const filters = ["All", "Web Application", "Mobile App", "Cloud Solution", "UI/UX Design"];
-
-  const projects = [
-    {
-      id: "1",
-      title: "FinTech Dashboard",
-      description: "Real-time financial analytics platform with AI-powered insights and predictive modeling",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-      tags: ["React", "Node.js", "AWS", "PostgreSQL"],
-      category: "Web Application",
-    },
-    {
-      id: "2",
-      title: "Healthcare Mobile App",
-      description: "HIPAA-compliant telemedicine platform with video consultation and prescription management",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
-      tags: ["React Native", "Firebase", "WebRTC"],
-      category: "Mobile App",
-    },
-    {
-      id: "3",
-      title: "E-Commerce Platform",
-      description: "Scalable marketplace with AI recommendations, payment integration, and inventory management",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
-      tags: ["Next.js", "Stripe", "PostgreSQL"],
-      category: "Web Application",
-    },
-    {
-      id: "4",
-      title: "Cloud Migration Project",
-      description: "Enterprise-scale migration from on-premise to AWS with zero downtime",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
-      tags: ["AWS", "Docker", "Kubernetes"],
-      category: "Cloud Solution",
-    },
-    {
-      id: "5",
-      title: "Fitness Tracking App",
-      description: "Cross-platform mobile app with wearable integration and social features",
-      image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80",
-      tags: ["Flutter", "Firebase", "HealthKit"],
-      category: "Mobile App",
-    },
-    {
-      id: "6",
-      title: "SaaS Design System",
-      description: "Comprehensive design system and component library for B2B SaaS platform",
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80",
-      tags: ["Figma", "React", "Storybook"],
-      category: "UI/UX Design",
-    },
-  ];
 
   const filteredProjects = activeFilter === "All" ? projects : projects.filter((p) => p.category === activeFilter);
 
