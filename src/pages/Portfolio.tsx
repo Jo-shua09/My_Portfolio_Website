@@ -51,10 +51,10 @@ const Portfolio = () => {
       {/* Projects Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols- 1 gap-8">
             {filteredProjects.map((project, index) => (
               <div key={project.id} className="animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-                <ProjectCard {...project} />
+                <ProjectCard {...project} live={project.live ?? ""} github={project.github ?? ""} index={index} />
               </div>
             ))}
           </div>

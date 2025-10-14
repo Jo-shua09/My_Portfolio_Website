@@ -4,35 +4,46 @@ import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
 interface ProjectCardProps {
-  id: string;
   title: string;
   description: string;
   image: string;
   tags: string[];
   category: string;
+  live: string;
+  github: string;
+  index: number;
 }
 
-const ProjectCard = ({ id, title, description, image, tags, category }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, image, tags, category, live, github, index }: ProjectCardProps) => {
+  const isEven = index % 2 === 0;
   return (
-    <Link to={`/portfolio/${id}`}>
-      <Card className="group relative overflow-hidden bg-card border-border hover:border-primary transition-all duration-500 cursor-pointer">
-        <div className="aspect-video relative overflow-hidden bg-muted">
+    <Link to={live} target="_blank" rel="noopener noreferrer">
+      <Card
+        className={`group relative md:flex w-full items-center max-w-6xl m-auto h-full overflow-hidden bg-card border-border hover:border-primary transition-all duration-500 cursor-pointer ${
+          isEven ? "md:flex-row-reverse" : ""
+        }`}
+      >
+        <div className="aspect-video relative overflow-hidden bg-muted w-full">
           <img src={image} alt={title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
 
           <div className="absolute top-4 left-4 w-10 h-10 bg-primary/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-            <FaGithub className="w-5 h-5 hover:scale-110 text-primary-foreground" />
+            <a href={github} target="_blank" rel="noopener noreferrer">
+              <FaGithub className="w-5 h-5 hover:scale-110 text-primary-foreground" />
+            </a>
           </div>
 
           <div className="absolute top-4 right-4 w-10 h-10 bg-primary/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-            <ExternalLink className="w-5 h-5 hover:scale-110 text-primary-foreground" />
+            <a href={live} target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="w-5 h-5 hover:scale-110 text-primary-foreground" />
+            </a>
           </div>
         </div>
 
-        <div className="p-6">
+        <div className="p-6 w-full">
           <div className="text-xs font-semibold font-mono text-primary uppercase tracking-wider mb-2">{category}</div>
           <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{title}</h3>
-          <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{description}</p>
+          <p className="text-muted-foreground text-sm mb-4">{description}</p>
 
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (

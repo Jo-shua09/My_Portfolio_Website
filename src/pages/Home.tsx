@@ -85,9 +85,9 @@ const Home = () => {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Showcasing my commitment to excellence and innovation</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.slice(0, 3).map((project) => (
-              <ProjectCard key={project.id} {...project} />
+          <div className="grid grid-cols-1 gap-8">
+            {projects.slice(0, 3).map((project, index) => (
+              <ProjectCard key={project.id} {...project} live={project.live ?? ""} github={project.github ?? ""} index={index} />
             ))}
           </div>
 
