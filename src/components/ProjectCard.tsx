@@ -1,0 +1,58 @@
+import { Link } from 'react-router-dom';
+import { Card } from '@/components/ui/card';
+import { ExternalLink } from 'lucide-react';
+
+interface ProjectCardProps {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  category: string;
+}
+
+const ProjectCard = ({ id, title, description, image, tags, category }: ProjectCardProps) => {
+  return (
+    <Link to={`/portfolio/${id}`}>
+      <Card className="group relative overflow-hidden bg-card border-border hover:border-primary transition-all duration-500 cursor-pointer">
+        <div className="aspect-video relative overflow-hidden bg-muted">
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+          
+          <div className="absolute top-4 right-4 w-10 h-10 bg-primary/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+            <ExternalLink className="w-5 h-5 text-primary-foreground" />
+          </div>
+        </div>
+
+        <div className="p-6">
+          <div className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">
+            {category}
+          </div>
+          <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+            {title}
+          </h3>
+          <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+            {description}
+          </p>
+          
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1 bg-secondary/50 text-foreground text-xs rounded-full border border-border"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </Card>
+    </Link>
+  );
+};
+
+export default ProjectCard;
