@@ -49,16 +49,31 @@ const Navigation = () => {
         </div>
       </div>
 
-      <div className="hidden items-center gap-4 md:flex absolute top-6 right-6">
-        <div className="cursor-pointer hover:scale-110 p-2 border-2 w-fit h-fit bg-background/30 backdrop-blur transition-all duration-300 mx-auto rounded-full">
+      <div className="hidden items-center gap-4 md:flex absolute top-6 right-6 z-20">
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/joshua-onyeka/"
+          rel="noreferrer"
+          className="cursor-pointer hover:scale-110 p-2 border-2 w-fit h-fit bg-background/30 backdrop-blur transition-all duration-300 mx-auto rounded-full"
+        >
           <FaLinkedin size={20} />
-        </div>
-        <div className="cursor-pointer hover:scale-110 p-2 border-2 w-fit h-fit bg-background/30 backdrop-blur transition-all duration-300 mx-auto rounded-full">
+        </a>
+        <a
+          target="_blank"
+          href="https://x.com/jo_shua_9"
+          rel="noreferrer"
+          className="cursor-pointer hover:scale-110 p-2 border-2 w-fit h-fit bg-background/30 backdrop-blur transition-all duration-300 mx-auto rounded-full"
+        >
           <FaXTwitter size={20} />
-        </div>
-        <div className="cursor-pointer hover:scale-110 p-2 border-2 w-fit h-fit bg-background/30 backdrop-blur transition-all duration-300 mx-auto rounded-full">
+        </a>
+        <a
+          target="_blank"
+          href="https://github.com/Jo-shua09"
+          rel="noreferrer"
+          className="cursor-pointer hover:scale-110 p-2 border-2 w-fit h-fit bg-background/30 backdrop-blur transition-all duration-300 mx-auto rounded-full"
+        >
           <FaGithub size={20} />
-        </div>
+        </a>
       </div>
     </nav>
   );

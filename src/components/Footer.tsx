@@ -52,13 +52,28 @@ const Footer = () => {
               <li className="text-muted-foreground text-sm">joshuaonyeka2020@gmail.com</li>
               <li className="text-muted-foreground text-sm">Available for projects</li>
               <li className="flex space-x-4 mt-4">
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  target="_blank"
+                  href="https://github.com/Jo-shua09"
+                  rel="noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   <FaGithub size={20} />
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/joshua-onyeka/"
+                  rel="noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   <FaLinkedin size={20} />
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  target="_blank"
+                  href="https://x.com/jo_shua_9"
+                  rel="noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   <FaXTwitter size={20} />
                 </a>
               </li>
