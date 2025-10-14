@@ -112,14 +112,10 @@ This project is configured for deployment on Vercel. The live version is availab
 
 ## 📞 Contact
 
-- **Email**: [Your email here]
-- **LinkedIn**: [Your LinkedIn profile]
+- **Email**: [joshuaonyeka2020@gmail.com](joshuaonyeka2020@gmail.com)
+- **LinkedIn**: [https://www.linkedin.com/in/joshua-onyeka/](https://www.linkedin.com/in/joshua-onyeka/)
 - **GitHub**: [https://github.com/Jo-shua09](https://github.com/Jo-shua09)
 - **Portfolio**: [https://joshwebfolio.vercel.app](https://joshwebfolio.vercel.app)
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
