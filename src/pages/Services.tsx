@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
@@ -37,18 +38,20 @@ const Services = () => {
       <section className="py-10 md:py-20">
         <div className="container mx-auto md:pb-0 pb-10 px-6">
           <div className="relative">
-            <button
-              onClick={() => servicesSwiperRef.current?.slidePrev()}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
-            >
-              ‹
-            </button>
-            <button
-              onClick={() => servicesSwiperRef.current?.slideNext()}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
-            >
-              ›
-            </button>
+            <div className="absolute top-0 right-0 z-10 flex gap-10">
+              <button
+                onClick={() => servicesSwiperRef.current?.slidePrev()}
+                className="bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
+              >
+                <ChevronLeft size={20} />
+              </button>
+              <button
+                onClick={() => servicesSwiperRef.current?.slideNext()}
+                className="bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
             <Swiper
               ref={servicesSwiperRef}
               effect={"coverflow"}
@@ -100,18 +103,20 @@ const Services = () => {
           </div>
 
           <div className="relative">
-            <button
-              onClick={() => techStackSwiperRef.current?.slidePrev()}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
-            >
-              ‹
-            </button>
-            <button
-              onClick={() => techStackSwiperRef.current?.slideNext()}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
-            >
-              ›
-            </button>
+            <div className="absolute top-0 right-0 z-10 flex gap-10">
+              <button
+                onClick={() => techStackSwiperRef.current?.slidePrev()}
+                className="bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
+              >
+                <ChevronLeft size={20} />
+              </button>
+              <button
+                onClick={() => techStackSwiperRef.current?.slideNext()}
+                className="bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
             <Swiper
               ref={techStackSwiperRef}
               slidesPerView={3}
