@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react";
+import { TrophySpin } from "react-loading-indicators";
+import SplitText from "./SplitText";
 
 const Loader = () => {
   const [isLoading, setIsLoading] = useState(true);
 
+  const handleAnimationComplete = () => {
+    // Handle animation complete if needed
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // 3 seconds loading time
+    }, 2000); // 2 seconds loading time
 
     return () => clearTimeout(timer);
   }, []);
@@ -16,30 +22,25 @@ const Loader = () => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-background">
       <div className="flex flex-col items-center space-y-8">
-        {/* Code brackets animation */}
-        <div className="relative">
-          <div className="text-6xl font-mono text-primary animate-pulse">{"</>"}</div>
-          <div className="absolute inset-0 text-6xl font-mono text-primary/30 animate-ping">{"</>"}</div>
-        </div>
-
+        <TrophySpin color="#f1fff1" size="large" text="" textColor="" />
         {/* Loading text */}
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-foreground mb-2">Hello There,</h2>
-          <div className="flex space-x-1 justify-center">
-            <div className="w-2 h-2 bg-primary rounded-full animate-bounce"></div>
-            <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: "0.1s" }}></div>
-            <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
-          </div>
-        </div>
-
-        {/* Progress bar */}
-        <div className="w-64 h-1 bg-muted rounded-full overflow-hidden">
-          <div className="h-full bg-primary rounded-full animate-pulse" style={{ width: "100%" }}></div>
-        </div>
-
-        {/* Developer-themed loading messages */}
-        <div className="text-sm text-muted-foreground font-mono">
-          <div className="animate-pulse">Initializing components...</div>
+          <h2 className="text-2xl ">
+            <SplitText
+              text="Hello, There!"
+              className="text-2xl font-mono text-foreground font-semibold text-center"
+              delay={100}
+              duration={0.6}
+              ease="power3.out"
+              splitType="chars"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="-100px"
+              textAlign="center"
+              onLetterAnimationComplete={handleAnimationComplete}
+            />
+          </h2>
         </div>
       </div>
     </div>
