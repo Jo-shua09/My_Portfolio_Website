@@ -71,10 +71,10 @@ const About = () => {
                   size="lg"
                   className="font-mono font-semibold text-lg cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 glow-border group"
                 >
-                  <div>
+                  <a href="/JoshuaOnyeka.pdf" download="JoshuaOnyeka.pdf">
                     Resume
                     <Download className="ml-2 w-4 h-4 group-hover:translate-y-1 transition-transform" />
-                  </div>
+                  </a>
                 </Button>
               </div>
             </div>
