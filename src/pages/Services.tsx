@@ -37,7 +37,7 @@ const Services = () => {
       <section className="py-10 md:py-20">
         <div className="container mx-auto md:pb-0 pb-10 px-6">
           <div className="relative">
-            <div className="absolute -top-5 right-0 z-10 flex gap-5 md:gap-10 mb-12">
+            <div className="absolute sm:hidden top-0 right-0 z-10 flex gap-5 md:gap-10 mb-12">
               <button
                 onClick={() => servicesSwiper?.slidePrev()}
                 className="bg-muted-foreground text-white font-bold p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
