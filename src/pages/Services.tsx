@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -12,8 +12,8 @@ import { EffectCoverflow, Pagination, Autoplay, Navigation as SwiperNavigation }
 import { services, techStack } from "@/assets/data/Services";
 
 const Services = () => {
-  const servicesSwiperRef = useRef(null);
-  const techStackSwiperRef = useRef(null);
+  const [servicesSwiper, setServicesSwiper] = useState(null);
+  const [techStackSwiper, setTechStackSwiper] = useState(null);
 
   return (
     <div className="min-h-screen bg-background">
@@ -38,22 +38,22 @@ const Services = () => {
       <section className="py-10 md:py-20">
         <div className="container mx-auto md:pb-0 pb-10 px-6">
           <div className="relative">
-            <div className="absolute top-0 right-0 z-10 flex gap-10">
+            <div className="absolute top-0 right-0 z-10 flex gap-5 md:gap-10 mb-8">
               <button
-                onClick={() => servicesSwiperRef.current?.slidePrev()}
-                className="bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
+                onClick={() => servicesSwiper?.slidePrev()}
+                className="bg-secondary-foreground text-white font-bold p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
               >
                 <ChevronLeft size={20} />
               </button>
               <button
-                onClick={() => servicesSwiperRef.current?.slideNext()}
-                className="bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
+                onClick={() => servicesSwiper?.slideNext()}
+                className="bg-secondary-foreground text-white font-bold p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
               >
                 <ChevronRight size={20} />
               </button>
             </div>
             <Swiper
-              ref={servicesSwiperRef}
+              onSwiper={setServicesSwiper}
               effect={"coverflow"}
               grabCursor={true}
               centeredSlides={true}
@@ -103,22 +103,22 @@ const Services = () => {
           </div>
 
           <div className="relative">
-            <div className="absolute top-0 right-0 z-10 flex gap-10">
+            <div className="absolute top-0 right-0 z-10 flex gap-5 md:gap-10 mb-8">
               <button
-                onClick={() => techStackSwiperRef.current?.slidePrev()}
-                className="bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
+                onClick={() => techStackSwiper?.slidePrev()}
+                className="bg-secondary-foreground text-white font-bold p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
               >
                 <ChevronLeft size={20} />
               </button>
               <button
-                onClick={() => techStackSwiperRef.current?.slideNext()}
-                className="bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
+                onClick={() => techStackSwiper?.slideNext()}
+                className="bg-secondary-foreground text-white font-bold p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
               >
                 <ChevronRight size={20} />
               </button>
             </div>
             <Swiper
-              ref={techStackSwiperRef}
+              onSwiper={setTechStackSwiper}
               slidesPerView={3}
               spaceBetween={20}
               autoplay={{
