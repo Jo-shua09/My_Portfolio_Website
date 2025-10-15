@@ -1,15 +1,40 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/assets/data/Projects";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
+  const projectRefs = useRef<HTMLDivElement[]>([]);
 
   const filters = ["All", "Web Application", "Mobile App", "Cloud Solution", "UI/UX Design"];
 
   const filteredProjects = activeFilter === "All" ? projects : projects.filter((p) => p.category === activeFilter);
+
+  useEffect(() => {
+    const isDesktop = window.innerWidth >= 768;
+
+    if (isDesktop) {
+      projectRefs.current.slice(0, -1).forEach((project) => {
+        ScrollTrigger.create({
+          trigger: project,
+          start: "top top",
+          end: "+=50%",
+          pin: project,
+          pinSpacing: false,
+        });
+      });
+    }
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, [filteredProjects]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -53,7 +78,14 @@ const Portfolio = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols- 1 gap-8">
             {filteredProjects.map((project, index) => (
-              <div key={project.id} className="animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+              <div
+                key={project.id}
+                ref={(el) => {
+                  if (el) projectRefs.current[index] = el;
+                }}
+                className="animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
                 <ProjectCard {...project} live={project.live ?? ""} github={project.github ?? ""} index={index} />
               </div>
             ))}

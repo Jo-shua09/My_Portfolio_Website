@@ -8,8 +8,35 @@ import ServiceCard from "@/components/ServiceCard";
 import ProjectCard from "@/components/ProjectCard";
 import { services } from "@/assets/data/Services";
 import { projects } from "@/assets/data/Projects";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
+  const projectRefs = useRef<HTMLDivElement[]>([]);
+
+  useEffect(() => {
+    const isDesktop = window.innerWidth >= 768;
+
+    if (isDesktop) {
+      projectRefs.current.slice(0, -1).forEach((project) => {
+        ScrollTrigger.create({
+          trigger: project,
+          start: "top top",
+          end: "+=50%",
+          pin: project,
+          pinSpacing: false,
+        });
+      });
+    }
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -87,7 +114,14 @@ const Home = () => {
 
           <div className="grid grid-cols-1 gap-8">
             {projects.slice(0, 3).map((project, index) => (
-              <ProjectCard key={project.id} {...project} live={project.live ?? ""} github={project.github ?? ""} index={index} />
+              <div
+                key={project.id}
+                ref={(el) => {
+                  if (el) projectRefs.current[index] = el;
+                }}
+              >
+                <ProjectCard {...project} live={project.live ?? ""} github={project.github ?? ""} index={index} />
+              </div>
             ))}
           </div>
 
