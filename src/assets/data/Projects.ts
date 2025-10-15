@@ -1,10 +1,21 @@
+import iblcda from "@/assets/images/iblcda.jpg";
+import estantien from "@/assets/images/estantien.jpg";
+import kicks from "@/assets/images/kickss.jpg";
+import rentchain from "@/assets/images/rent-chain.jpg";
+import edmoss from "@/assets/images/edmoss.jpg";
+import basicDept from "@/assets/images/baasic-dept.jpg";
+import evaraStores from "@/assets/images/ecarra.jpg";
+import caraStore from "@/assets/images/cara-store.jpg";
+import grilli from "@/assets/images/grilli.jpg";
+import odinProject from "@/assets/images/odinproject.jpg";
+
 export const projects = [
   {
     id: "1",
     title: "IBLCDA CDA Street Registry",
     description:
       "A comprehensive web platform for the Igbogbo Baiyeku Local Council Development Association (IBLCDA) CDA, Street Registry. This system provides a centralized database for managing and tracking Community Development Area (CDA) street registrations, enabling efficient administration and public access to street information across various communities.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+    image: iblcda,
     tags: ["React", "Tailwind CSS", "Firebase", "Framer Motion", "React Hook Form"],
     category: "Web Application",
     live: "https://iblcda-cda-registry.vercel.app",
@@ -15,7 +26,7 @@ export const projects = [
     title: "Estantien - Luxury Real Estate Platform",
     description:
       "Estantien is a sophisticated web platform designed for luxury real estate, offering an exclusive gateway to premium properties. It provides users with advanced search capabilities, virtual tours, and a curated selection of high-end homes, apartments, and commercial properties. The platform aims to connect discerning clients with their dream properties through a seamless and personalized browsing experience.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+    image: estantien,
     tags: ["React", "Tailwind CSS", "Material-UI", "Swiper", "Mockaroo", "AOS"],
     category: "Web Application",
     live: "https://estantien.vercel.app",
@@ -26,7 +37,7 @@ export const projects = [
     title: "Kicks - Online Sneaker & Footwear Store",
     description:
       "Kicks is an e-commerce platform designed as a premier destination for trendy and comfortable footwear. It offers a diverse collection of the latest sneakers, boots, and athletic shoes, providing a seamless online shopping experience for customers looking for their perfect pair.",
-    image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80",
+    image: kicks,
     tags: ["React", "Tailwind CSS", "Material-UI", "Swiper", "AOS", "Redux"],
     category: "Web Application",
     live: "https://kickss.vercel.app",
@@ -37,7 +48,7 @@ export const projects = [
     title: "RentChain - Decentralized Renting & Property Management Platform",
     description:
       "In collaboration with @emmyhack, Rentchain is an innovative blockchain-based web platform built on the Morph network, designed to revolutionize residential and commercial rent payments and property management. It offers a secure, transparent, and efficient solution for both landlords and tenants globally, leveraging decentralized technology to streamline transactions and interactions.",
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80",
+    image: rentchain,
     tags: ["React", "Tailwind CSS"],
     category: "Web Application",
     live: "https://rent-chain.vercel.app",
@@ -62,6 +73,8 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
     tags: ["React", "Tailwind CSS", "Recharts", "Material-UI"],
     category: "UI/UX Design",
+    live: "/",
+    github: "https://github.com/Jo-shua09/admin-dashboard",
   },
   {
     id: "7",
@@ -71,13 +84,15 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80",
     tags: ["React", "Tailwind CSS", "Material-UI", "AOS", "Spotify API"],
     category: "Web Application",
+    live: "/",
+    github: "https://github.com/Jo-shua09/Lyricly-Music-",
   },
   {
     id: "8",
     title: "EDMOSS - Business Growth Consulting Landing Page",
     description:
       "This project is the landing page for EDMOSS, a leading business consultancy firm based in Nigeria. The page is designed to serve as the primary digital gateway for the company, effectively showcasing its expertise in strategic growth, digital transformation, and operational excellence, specifically targeting Nigerian and broader African enterprises. It aims to establish EDMOSS as a trusted partner for businesses seeking sustainable growth and strategic advisory.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+    image: edmoss,
     tags: ["React", "Tailwind CSS"],
     category: "Web Application",
     live: "https://edmoss.vercel.app",
@@ -88,7 +103,7 @@ export const projects = [
     title: "Digital Branding & Product Design Agency Website (Concept)",
     description:
       "This project is a conceptual website for a leading digital branding and product design agency, inspired by agencies that partner with global brands. The site aims to present a clean, professional, and engaging online presence that highlights the agency's expertise in crafting digital products, services, and e-commerce experiences.",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80",
+    image: basicDept,
     tags: ["HTML5", "CSS3", "JavaScript", "Swiper"],
     category: "Web Application",
     live: "https://baasic-dept.vercel.app",
@@ -99,10 +114,10 @@ export const projects = [
     title: "The Odin Project (Concept)",
     description:
       "This project is a conceptual web designed for The Odin Project, an open-source curriculum dedicated to empowering aspiring web developers. The page aims to clearly communicate the platform's mission: to provide comprehensive learning paths for individuals to kickstart and advance their careers in web development. The focus was on creating a welcoming and informative gateway for new learners.",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
+    image: odinProject,
     tags: ["HTML5", "CSS3", "JavaScript"],
     category: "Web Application",
-    live: "https://t-doinproject.vercel.app",
+    live: "https://t-odinproject.vercel.app/",
     github: "https://github.com/Jo-shua09/odinproject_clone",
   },
   {
@@ -110,7 +125,7 @@ export const projects = [
     title: "Evara Stores Redesign",
     description:
       "This project is a revitalized e-commerce website, a 'revamped version' of the Cara store, now known as Evara Stores. The primary goal was to deliver a fresh design, significantly improve site navigation, and enhance the overall user experience for online shopping. It's a modern e-commerce solution built to facilitate seamless buying and selling.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
+    image: evaraStores,
     tags: ["HTML5", "CSS3", "JavaScript", "Swiper"],
     category: "Web Application",
     live: "https://t-ecarra.vercel.app",
@@ -121,10 +136,10 @@ export const projects = [
     title: "Cara Store - E-commerce Website",
     description:
       "This project is a foundational e-commerce website, named 'Cara Store', designed to provide a comprehensive online shopping experience. It serves as a digital storefront, enabling users to browse products and engage in online purchasing. The focus was on establishing a solid, functional e-commerce presence with a clean design.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
+    image: caraStore,
     tags: ["HTML5", "CSS3", "JavaScript"],
     category: "Web Application",
-    live: "https://cara-store.vercel.app",
+    live: "https://tuma-shop.vercel.app/",
     github: "https://github.com/Jo-shua09/Cara_store",
   },
   {
@@ -132,10 +147,10 @@ export const projects = [
     title: "Grilli Foods - Exclusive Restaurant Website",
     description:
       "This project is a sophisticated website designed for 'Grilli Foods', conceptualized as an exclusive and high-end restaurant. The platform aims to create an inviting online presence that reflects the restaurant's premium dining experience, showcasing its unique cuisine and elegant ambiance to attract discerning clientele.",
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+    image: grilli,
     tags: ["HTML5", "CSS3", "JavaScript", "Swiper"],
     category: "Web Application",
-    live: "https://grilli-foods.vercel.app",
+    live: "https://t-restuarant.vercel.app/",
     github: "https://github.com/Jo-shua09/Grilli_foods",
   },
 ];
