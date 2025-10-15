@@ -13,7 +13,6 @@ import { services, techStack } from "@/assets/data/Services";
 
 const Services = () => {
   const [servicesSwiper, setServicesSwiper] = useState(null);
-  const [techStackSwiper, setTechStackSwiper] = useState(null);
 
   return (
     <div className="min-h-screen bg-background">
@@ -41,13 +40,13 @@ const Services = () => {
             <div className="absolute top-0 right-0 z-10 flex gap-5 md:gap-10 mb-8">
               <button
                 onClick={() => servicesSwiper?.slidePrev()}
-                className="bg-secondary-foreground text-white font-bold p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
+                className="bg-muted-foreground text-white font-bold p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
               >
                 <ChevronLeft size={20} />
               </button>
               <button
                 onClick={() => servicesSwiper?.slideNext()}
-                className="bg-secondary-foreground text-white font-bold p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
+                className="bg-muted-foreground text-white font-bold p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
               >
                 <ChevronRight size={20} />
               </button>
@@ -103,22 +102,7 @@ const Services = () => {
           </div>
 
           <div className="relative">
-            <div className="absolute top-0 right-0 z-10 flex gap-5 md:gap-10 mb-8">
-              <button
-                onClick={() => techStackSwiper?.slidePrev()}
-                className="bg-secondary-foreground text-white font-bold p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
-              >
-                <ChevronLeft size={20} />
-              </button>
-              <button
-                onClick={() => techStackSwiper?.slideNext()}
-                className="bg-secondary-foreground text-white font-bold p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
-              >
-                <ChevronRight size={20} />
-              </button>
-            </div>
             <Swiper
-              onSwiper={setTechStackSwiper}
               slidesPerView={3}
               spaceBetween={20}
               autoplay={{
