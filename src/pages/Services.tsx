@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
@@ -5,10 +6,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css/navigation";
+import { EffectCoverflow, Pagination, Autoplay, Navigation as SwiperNavigation } from "swiper/modules";
 import { services, techStack } from "@/assets/data/Services";
 
 const Services = () => {
+  const servicesSwiperRef = useRef(null);
+  const techStackSwiperRef = useRef(null);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -31,39 +36,54 @@ const Services = () => {
       {/* Services Grid */}
       <section className="py-10 md:py-20">
         <div className="container mx-auto md:pb-0 pb-10 px-6">
-          <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={3}
-            breakpoints={{
-              320: {
-                slidesPerView: 1,
-              },
-              640: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 3,
-              },
-            }}
-            coverflowEffect={{
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: true,
-            }}
-            pagination={true}
-            modules={[EffectCoverflow, Pagination]}
-            className="mySwiper pt-10 pb-10"
-          >
-            {services.map((service, index) => (
-              <SwiperSlide key={service.title}>
-                <ServiceCard {...service} delay={index * 50} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <div className="relative">
+            <button
+              onClick={() => servicesSwiperRef.current?.slidePrev()}
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
+            >
+              ‹
+            </button>
+            <button
+              onClick={() => servicesSwiperRef.current?.slideNext()}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
+            >
+              ›
+            </button>
+            <Swiper
+              ref={servicesSwiperRef}
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView={3}
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                },
+                640: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 3,
+                },
+              }}
+              coverflowEffect={{
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+              }}
+              pagination={true}
+              modules={[EffectCoverflow, Pagination]}
+              className="mySwiper pt-10 pb-10"
+            >
+              {services.map((service, index) => (
+                <SwiperSlide key={service.title}>
+                  <ServiceCard {...service} delay={index * 50} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </section>
 
@@ -79,41 +99,56 @@ const Services = () => {
             </p>
           </div>
 
-          <Swiper
-            slidesPerView={3}
-            spaceBetween={20}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            breakpoints={{
-              320: {
-                slidesPerView: 3,
-              },
-              640: {
-                slidesPerView: 4,
-              },
-              1024: {
-                slidesPerView: 6,
-              },
-            }}
-            modules={[Pagination, Autoplay]}
-            className="mySwiper pt-10 pb-10"
-          >
-            {techStack.map((tech, index) => (
-              <SwiperSlide key={index}>
-                <div className="p-3 bg-card rounded-xl border-border hover:border-primary transition-all duration-300 hover-lift text-center">
-                  <div className="flex flex-col items-center gap-2">
-                    {tech.name}
-                    <img src={tech.img} alt="stack image" className="w-12 h-12 object-contain" />
+          <div className="relative">
+            <button
+              onClick={() => techStackSwiperRef.current?.slidePrev()}
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
+            >
+              ‹
+            </button>
+            <button
+              onClick={() => techStackSwiperRef.current?.slideNext()}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/80 transition-colors"
+            >
+              ›
+            </button>
+            <Swiper
+              ref={techStackSwiperRef}
+              slidesPerView={3}
+              spaceBetween={20}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+              }}
+              breakpoints={{
+                320: {
+                  slidesPerView: 3,
+                },
+                640: {
+                  slidesPerView: 4,
+                },
+                1024: {
+                  slidesPerView: 6,
+                },
+              }}
+              modules={[Pagination, Autoplay]}
+              className="mySwiper pt-10 pb-10"
+            >
+              {techStack.map((tech, index) => (
+                <SwiperSlide key={index}>
+                  <div className="p-3 bg-card rounded-xl border-border hover:border-primary transition-all duration-300 hover-lift text-center">
+                    <div className="flex flex-col items-center gap-2">
+                      {tech.name}
+                      <img src={tech.img} alt="stack image" className="w-12 h-12 object-contain" />
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </section>
 
