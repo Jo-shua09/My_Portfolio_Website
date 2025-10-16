@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Cog, Briefcase, User, Mail } from "lucide-react";
+import { Home, Cog, Briefcase, User, Mail, BookOpen } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import logo from "@/assets/images/logo-bg.png";
@@ -12,6 +12,7 @@ const Navigation = () => {
     { name: "Home", path: "/", icon: Home },
     { name: "Services", path: "/services", icon: Cog },
     { name: "Portfolio", path: "/portfolio", icon: Briefcase },
+    { name: "Blog", path: "/blog", icon: BookOpen },
     { name: "About", path: "/about", icon: User },
     { name: "Contact", path: "/contact", icon: Mail },
   ];
