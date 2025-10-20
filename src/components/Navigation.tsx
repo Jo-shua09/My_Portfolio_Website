@@ -30,7 +30,7 @@ const Navigation = () => {
   return (
     <nav className="w-full h-fit relative px-6 flex items-center justify-between">
       <div className="w-fit h-fit md:block hidden absolute top-5 left-6">
-        <img src={theme === "light" ? logoLight : logoDark} alt="logo" className="w-24 h-fit object-contain" loading="lazy" />
+        <img src={theme === "light" ? logoLight : logoDark} alt="logo" className="w-24 h-fit shadow-2xl rounded-full object-contain" loading="lazy" />
       </div>
 
       <div className="bg-transparent m-auto fixed top-0 left-0 right-0 z-50 w-fit h-fit">
