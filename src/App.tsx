@@ -12,7 +12,9 @@ import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 import Loader from "./components/Loader";
+import ThemeToggle from "./components/ThemeToggle";
 import useScrollToTop from "./hooks/useScrollToTop";
+import { Analytics } from "@vercel/analytics/react";
 
 const queryClient = new QueryClient();
 
@@ -46,14 +48,16 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <Analytics />
       <TooltipProvider>
         <Toaster />
         <Sonner />
         {isLoading ? (
           <Loader />
         ) : (
-          <BrowserRouter>
+          <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
             <AppContent />
+            <ThemeToggle />
           </BrowserRouter>
         )}
       </TooltipProvider>

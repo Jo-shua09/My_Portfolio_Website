@@ -2,11 +2,21 @@ import { Link, useLocation } from "react-router-dom";
 import { Home, Cog, Briefcase, User, Mail, BookOpen } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import logo from "@/assets/images/logo-bg.png";
+import { useState, useEffect } from "react";
+import logoDark from "@/assets/images/logo.png";
+import logoLight from "@/assets/images/logo-bg.png";
 
 const Navigation = () => {
   const location = useLocation();
   const pathname = location.pathname;
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
 
   const navLinks = [
     { name: "Home", path: "/", icon: Home },
@@ -20,7 +30,7 @@ const Navigation = () => {
   return (
     <nav className="w-full h-fit relative px-6 flex items-center justify-between">
       <div className="w-fit h-fit md:block hidden absolute top-5 left-6">
-        <img src={logo} alt="logo" className="w-24 h-fit object-contain" />
+        <img src={theme === "light" ? logoLight : logoDark} alt="logo" className="w-24 h-fit object-contain" loading="lazy" />
       </div>
 
       <div className="bg-transparent m-auto fixed top-0 left-0 right-0 z-50 w-fit h-fit">

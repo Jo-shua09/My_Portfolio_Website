@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
@@ -17,24 +16,30 @@ interface ProjectCardProps {
 const ProjectCard = ({ title, description, image, tags, category, live, github, index }: ProjectCardProps) => {
   const isEven = index % 2 === 0;
   return (
-    <Link to={live} target="_blank" rel="noopener noreferrer">
+    <div className="cursor-pointer">
       <Card
-        className={`group relative md:flex w-full items-center max-w-6xl m-auto h-full overflow-hidden bg-card border-border hover:border-primary transition-all duration-500 cursor-pointer ${
+        className={`group relative md:flex w-full items-center max-w-6xl m-auto h-full overflow-hidden bg-card border-border hover:border-primary transition-all duration-500 ${
           isEven ? "md:flex-row-reverse" : ""
         }`}
+        onClick={() => window.open(live, "_blank")}
       >
         <div className="aspect-video relative overflow-hidden bg-muted w-full">
-          <img src={image} alt={title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+            loading="lazy"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
 
           <div className="absolute top-4 left-4 w-10 h-10 bg-primary/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-            <a href={github} target="_blank" rel="noopener noreferrer">
+            <a href={github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
               <FaGithub className="w-5 h-5 hover:scale-110 text-primary-foreground" />
             </a>
           </div>
 
           <div className="absolute top-4 right-4 w-10 h-10 bg-primary/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-            <a href={live} target="_blank" rel="noopener noreferrer">
+            <a href={live} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
               <ExternalLink className="w-5 h-5 hover:scale-110 text-primary-foreground" />
             </a>
           </div>
@@ -54,7 +59,7 @@ const ProjectCard = ({ title, description, image, tags, category, live, github, 
           </div>
         </div>
       </Card>
-    </Link>
+    </div>
   );
 };
 

@@ -1,17 +1,33 @@
 import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import logo from "@/assets/images/logo-bg.png";
+import { useState, useEffect } from "react";
+import logoDark from "@/assets/images/logo.png";
+import logoLight from "@/assets/images/logo-bg.png";
 
 const Footer = () => {
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
+
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="col-span-1">
-            <div className="flex items-center  mb-4 w-fit h-fit">
-              <img src={logo} alt="logo" className="w-24 h-fit object-contain" />
+            <div className="flex items-center mb-4 w-fit h-fit">
+              <img
+                src={theme === "light" ? logoLight : logoDark}
+                alt="logo"
+                className="w-24 h-fit shadow-2xl rounded-full object-contain"
+                loading="lazy"
+              />
             </div>
             <p className="text-muted-foreground text-sm">Building Digital Excellence</p>
           </div>
