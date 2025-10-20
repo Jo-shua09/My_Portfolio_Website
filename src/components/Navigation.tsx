@@ -3,8 +3,8 @@ import { Home, Cog, Briefcase, User, Mail, BookOpen } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useState, useEffect } from "react";
-import logoDark from "@/assets/images/logo.png";
-import logoLight from "@/assets/images/logo-bg.png";
+import logoLight from "@/assets/images/logo.png";
+import logoDark from "@/assets/images/logo-bg.png";
 
 const Navigation = () => {
   const location = useLocation();

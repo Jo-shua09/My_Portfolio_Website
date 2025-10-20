@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useState, useEffect } from "react";
-import logoDark from "@/assets/images/logo.png";
-import logoLight from "@/assets/images/logo-bg.png";
+import logoLight from "@/assets/images/logo.png";
+import logoDark from "@/assets/images/logo-bg.png";
 
 const Footer = () => {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
