@@ -71,6 +71,6 @@ export const techStack = [
   { name: "Figma", img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" },
   { name: "Adobe XD", img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/xd/xd-plain.svg" },
   { name: "Postman", img: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
-  { name: "shadcn/ui", img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" },
-  { name: "Appwrite", img: "https://appwrite.io/images/appwrite-logo.svg" },
+  { name: "shadcn/ui", img: "https://images.seeklogo.com/logo-png/51/1/shadcn-ui-logo-png_seeklogo-519786.png" },
+  { name: "Appwrite", img: "https://icon.icepanel.io/Technology/svg/Appwrite.svg" },
 ];
