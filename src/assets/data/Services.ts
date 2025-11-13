@@ -13,14 +13,14 @@ export const services = [
     title: "UI/UX Design",
     description:
       "User-centered design that balances aesthetics with functionality. Figma prototypes, design systems, and conversion-optimized interfaces.",
-    status: "In Progress",
+    status: "Active",
   },
   {
     icon: Smartphone,
     title: "Mobile Development",
     description:
       "Native iOS and Android apps, plus React Native and Flutter cross-platform solutions. Smooth, intuitive experiences that users love.",
-    status: "Soon",
+    status: "In Progress",
   },
   {
     icon: Cloud,
@@ -71,4 +71,6 @@ export const techStack = [
   { name: "Figma", img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" },
   { name: "Adobe XD", img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/xd/xd-plain.svg" },
   { name: "Postman", img: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
+  { name: "shadcn/ui", img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" },
+  { name: "Appwrite", img: "https://appwrite.io/images/appwrite-logo.svg" },
 ];
