@@ -30,7 +30,7 @@ const Blog = () => {
 
         const data = await response.json();
 
-        if (data.status === "ok") {
+        if (data.status === "ok" && data.items) {
           const formattedPosts: MediumPost[] = data.items.map(
             (item: { title: string; link: string; pubDate: string; description: string; categories: string[] }) => ({
               title: item.title,

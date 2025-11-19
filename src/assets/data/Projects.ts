@@ -30,6 +30,7 @@ export const projects = [
     description:
       "A comprehensive, modern React-based web application for EnvoyRoute Global Courier & Logistics Service. This platform provides a seamless user experience for customers to explore services, request quotes, track shipments, and manage logistics needs. Built with cutting-edge technologies to ensure fast performance, accessibility, and scalability.",
     image: envoyroute,
+    tags: ["Vite", "TypeScript", "React", "shadcn/ui", "Tailwind CSS", "React Router", "React Hook Form", "Zod", "React Query"],
     category: "Web Application",
     live: "https://envoyroute.vercel.app/",
     github: "https://github.com/Jo-shua09/EnvoyRoute-Global",
@@ -40,7 +41,7 @@ export const projects = [
     description:
       "A modern, responsive website for Solstice Sanctuary, a luxurious spa offering a variety of wellness services including massages, facials, hydrotherapy, and body treatments. The site provides an immersive experience to book appointments, explore services, and learn about the spa's philosophy.",
     image: solstice,
-    tags: ["Vite", "TypeScript", "React", "shadcn-ui", "Tailwind CSS", ],
+    tags: ["Vite", "TypeScript", "React", "shadcn-ui", "Tailwind CSS", "React Router"],
     category: "Web Application",
     live: "https://solstice-santuary.vercel.app",
     github: "https://github.com/Jo-shua09/solstice-santuary",
