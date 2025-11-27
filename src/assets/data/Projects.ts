@@ -1,3 +1,4 @@
+import vitalink from "@/assets/images/vitalink.png";
 import maglo from "@/assets/images/maglo.jpeg";
 import iblcda from "@/assets/images/iblcda.jpg";
 import estantien from "@/assets/images/estantien.jpg";
@@ -15,6 +16,28 @@ import envoyroute from "@/assets/images/envoyroute.png";
 export const projects = [
   {
     id: "1",
+    title: "Vitalink - Healthcare Management Platform",
+    description:
+      "A comprehensive healthcare management platform built with React, TypeScript, and Vite that connects patients and doctors through an intuitive web interface. Vitalink enables seamless health monitoring, patient management, and AI-powered health insights. This winning hackathon project from Codefest features role-based authentication, real-time vital monitoring, and a culturally aware multilingual AI chatbot supporting English, Pidgin, and Hausa.",
+    image: vitalink,
+    tags: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Radix UI",
+      "Framer Motion",
+      "React Query",
+      "Recharts",
+      "React Hook Form",
+      "Zod",
+      "Google Gemini AI",
+    ],
+    category: "Web Application",
+    live: "https://vitalink-indol.vercel.app/",
+    github: "https://github.com/CHIDI00/submissions/tree/main/team-32-Vitalink",
+  },
+  {
+    id: "2",
     title: "Maglo - Financial Management Dashboard",
     description:
       "Maglo Finance Dashboard is a modern, responsive financial management web application designed to help users track their financial transactions, manage invoices, and monitor wallet balances. Built with React and TypeScript, it features a clean, intuitive interface with real-time data visualization and robust state management.",
@@ -25,7 +48,7 @@ export const projects = [
     github: "https://github.com/Jo-shua09/Maglo-Finance-Dashboard",
   },
   {
-    id: "2",
+    id: "3",
     title: "EnvoyRoute Global Transit",
     description:
       "A comprehensive, modern React-based web application for EnvoyRoute Global Courier & Logistics Service. This platform provides a seamless user experience for customers to explore services, request quotes, track shipments, and manage logistics needs. Built with cutting-edge technologies to ensure fast performance, accessibility, and scalability.",
@@ -36,7 +59,7 @@ export const projects = [
     github: "https://github.com/Jo-shua09/EnvoyRoute-Global",
   },
   {
-    id: "3",
+    id: "4",
     title: "Solstice Sanctuary",
     description:
       "A modern, responsive website for Solstice Sanctuary, a luxurious spa offering a variety of wellness services including massages, facials, hydrotherapy, and body treatments. The site provides an immersive experience to book appointments, explore services, and learn about the spa's philosophy.",
@@ -47,7 +70,7 @@ export const projects = [
     github: "https://github.com/Jo-shua09/solstice-santuary",
   },
   {
-    id: "4",
+    id: "5",
     title: "IBLCDA CDA Street Registry",
     description:
       "A comprehensive web platform for the Igbogbo Baiyeku Local Council Development Association (IBLCDA) CDA, Street Registry. This system provides a centralized database for managing and tracking Community Development Area (CDA) street registrations, enabling efficient administration and public access to street information across various communities.",
@@ -58,7 +81,7 @@ export const projects = [
     github: "https://github.com/Jo-shua09/CDA-Street-Registry",
   },
   {
-    id: "5",
+    id: "6",
     title: "Estantien - Luxury Real Estate Platform",
     description:
       "Estantien is a sophisticated web platform designed for luxury real estate, offering an exclusive gateway to premium properties. It provides users with advanced search capabilities, virtual tours, and a curated selection of high-end homes, apartments, and commercial properties. The platform aims to connect discerning clients with their dream properties through a seamless and personalized browsing experience.",
@@ -69,7 +92,7 @@ export const projects = [
     github: "https://github.com/Jo-shua09/real-estate",
   },
   {
-    id: "6",
+    id: "7",
     title: "Kicks - Online Sneaker & Footwear Store",
     description:
       "Kicks is an e-commerce platform designed as a premier destination for trendy and comfortable footwear. It offers a diverse collection of the latest sneakers, boots, and athletic shoes, providing a seamless online shopping experience for customers looking for their perfect pair.",
@@ -80,7 +103,7 @@ export const projects = [
     github: "https://github.com/Jo-shua09/kicks-e-commerce",
   },
   {
-    id: "7",
+    id: "8",
     title: "RentChain - Decentralized Renting & Property Management Platform",
     description:
       "In collaboration with @emmyhack, Rentchain is an innovative blockchain-based web platform built on the Morph network, designed to revolutionize residential and commercial rent payments and property management. It offers a secure, transparent, and efficient solution for both landlords and tenants globally, leveraging decentralized technology to streamline transactions and interactions.",
@@ -91,7 +114,7 @@ export const projects = [
     github: "https://github.com/Emmyhack/Morph-RentChain",
   },
   {
-    id: "8",
+    id: "9",
     title: "Joshua Portfolio - Personal Website",
     description:
       "A modern, responsive personal portfolio website showcasing my projects, skills, and services. Built with React, TypeScript, and Tailwind CSS for a sleek and interactive user experience, featuring smooth animations and a clean design to highlight my work as a web developer.",
@@ -102,7 +125,7 @@ export const projects = [
     github: "https://github.com/Jo-shua09/JoshuaPortfolio",
   },
   {
-    id: "9",
+    id: "10",
     title: "Admin Dashboard UI Concept",
     description:
       "This project is a user interface (UI) concept for a modern and intuitive admin dashboard. It showcases a clean, functional design demonstrating how an administrative panel could be structured to manage various data points and operations efficiently. The focus was on creating a visually appealing and highly usable interface that provides a clear overview and easy navigation for administrative tasks.",
@@ -113,7 +136,7 @@ export const projects = [
     github: "https://github.com/Jo-shua09/admin-dashboard",
   },
   {
-    id: "10",
+    id: "11",
     title: "Lyricly - Your Personal Music Companion",
     description:
       "Lyricly is a web-based music companion designed to enhance the user's music discovery and organization experience. It provides a seamless platform for users to discover new artists, manage their favorite tracks through custom playlists, and easily find lyrics, creating a comprehensive personal music hub.",
@@ -124,7 +147,7 @@ export const projects = [
     github: "https://github.com/Jo-shua09/Lyricly-Music-",
   },
   {
-    id: "11",
+    id: "12",
     title: "EDMOSS - Business Growth Consulting Landing Page",
     description:
       "This project is the landing page for EDMOSS, a leading business consultancy firm based in Nigeria. The page is designed to serve as the primary digital gateway for the company, effectively showcasing its expertise in strategic growth, digital transformation, and operational excellence, specifically targeting Nigerian and broader African enterprises. It aims to establish EDMOSS as a trusted partner for businesses seeking sustainable growth and strategic advisory.",
@@ -135,7 +158,7 @@ export const projects = [
     github: "https://github.com/Jo-shua09/Edmoss_landingPage",
   },
   {
-    id: "12",
+    id: "13",
     title: "Digital Branding & Product Design Agency Website (Concept)",
     description:
       "This project is a conceptual website for a leading digital branding and product design agency, inspired by agencies that partner with global brands. The site aims to present a clean, professional, and engaging online presence that highlights the agency's expertise in crafting digital products, services, and e-commerce experiences.",
@@ -146,7 +169,7 @@ export const projects = [
     github: "https://github.com/Jo-shua09/BASIC-DEPT_web",
   },
   {
-    id: "13",
+    id: "14",
     title: "The Odin Project (Concept)",
     description:
       "This project is a conceptual web designed for The Odin Project, an open-source curriculum dedicated to empowering aspiring web developers. The page aims to clearly communicate the platform's mission: to provide comprehensive learning paths for individuals to kickstart and advance their careers in web development. The focus was on creating a welcoming and informative gateway for new learners.",
@@ -157,7 +180,7 @@ export const projects = [
     github: "https://github.com/Jo-shua09/odinproject_clone",
   },
   {
-    id: "14",
+    id: "15",
     title: "Evara Stores Redesign",
     description:
       "This project is a revitalized e-commerce website, a 'revamped version' of the Cara store, now known as Evara Stores. The primary goal was to deliver a fresh design, significantly improve site navigation, and enhance the overall user experience for online shopping. It's a modern e-commerce solution built to facilitate seamless buying and selling.",
@@ -168,7 +191,7 @@ export const projects = [
     github: "https://github.com/Jo-shua09/Ecarra_stores.commerce",
   },
   {
-    id: "15",
+    id: "16",
     title: "Cara Store - E-commerce Website",
     description:
       "This project is a foundational e-commerce website, named 'Cara Store', designed to provide a comprehensive online shopping experience. It serves as a digital storefront, enabling users to browse products and engage in online purchasing. The focus was on establishing a solid, functional e-commerce presence with a clean design.",
@@ -179,7 +202,7 @@ export const projects = [
     github: "https://github.com/Jo-shua09/Cara_store",
   },
   {
-    id: "16",
+    id: "17",
     title: "Grilli Foods - Exclusive Restaurant Website",
     description:
       "This project is a sophisticated website designed for 'Grilli Foods', conceptualized as an exclusive and high-end restaurant. The platform aims to create an inviting online presence that reflects the restaurant's premium dining experience, showcasing its unique cuisine and elegant ambiance to attract discerning clientele.",

@@ -17,19 +17,15 @@ const Portfolio = () => {
   const filteredProjects = activeFilter === "All" ? projects : projects.filter((p) => p.category === activeFilter);
 
   useEffect(() => {
-    const isDesktop = window.innerWidth >= 768;
-
-    if (isDesktop) {
-      projectRefs.current.slice(0, -1).forEach((project) => {
-        ScrollTrigger.create({
-          trigger: project,
-          start: "top top",
-          end: "+=50%",
-          pin: project,
-          pinSpacing: false,
-        });
+    projectRefs.current.slice(0, -1).forEach((project) => {
+      ScrollTrigger.create({
+        trigger: project,
+        start: "top top",
+        end: "+=50%",
+        pin: project,
+        pinSpacing: false,
       });
-    }
+    });
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -76,7 +72,7 @@ const Portfolio = () => {
       {/* Projects Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols- 1 gap-8">
+          <div className="grid grid-cols-1 gap-8">
             {filteredProjects.map((project, index) => (
               <div
                 key={project.id}
