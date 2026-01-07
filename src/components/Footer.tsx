@@ -25,7 +25,7 @@ const Footer = () => {
               <img
                 src={theme === "light" ? logoLight : logoDark}
                 alt="logo"
-                className="w-24 h-24 border max-h-fit shadow-2xl rounded-full object-contain"
+                className="w-24 h-24 mb-1 max-h-fit shadow-2xl rounded-full object-contain"
                 loading="lazy"
               />
             </div>
