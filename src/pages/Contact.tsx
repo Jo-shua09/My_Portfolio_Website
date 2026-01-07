@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -18,27 +19,32 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // EmailJS credentials from environment variables
+  const EMAILJS_SERVICE_ID = import.meta.env.VITE_SERVICE;
+  const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_TEMPLATE;
+  const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/xpznqkgj", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          company: formData.company,
-          message: formData.message,
-          _subject: `Portfolio Contact - ${formData.name}`,
-          _replyto: formData.email,
-        }),
+      // Initialize EmailJS with your public key
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+
+      // Send email using EmailJS
+      const response = await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        message: formData.message,
+        to_email: "joshuaonyeka2020@gmail.com",
+        from_name: formData.name,
+        reply_to: formData.email,
+        subject: `Portfolio Contact - ${formData.name}`,
       });
 
-      if (response.ok) {
+      if (response.status === 200) {
         toast({
           title: "Message Sent!",
           description: "Thank you for your message. I'll get back to you within 24 hours.",
@@ -48,6 +54,7 @@ const Contact = () => {
         throw new Error("Failed to send message");
       }
     } catch (error) {
+      console.error("EmailJS Error:", error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again or contact me directly at joshuaonyeka2020@gmail.com",

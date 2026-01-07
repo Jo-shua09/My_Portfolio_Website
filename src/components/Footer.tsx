@@ -21,11 +21,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="col-span-1">
-            <div className="flex items-center mb-4 w-fit h-fit">
+            <div className="flex items-center mb-4 w-fit h-12">
               <img
                 src={theme === "light" ? logoLight : logoDark}
                 alt="logo"
-                className="w-24 h-fit shadow-2xl rounded-full object-contain"
+                className="w-24 h-24 border max-h-fit shadow-2xl rounded-full object-contain"
                 loading="lazy"
               />
             </div>
