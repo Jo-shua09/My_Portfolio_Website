@@ -12,7 +12,7 @@ const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const projectRefs = useRef<HTMLDivElement[]>([]);
 
-  const filters = ["All", "Web Application", "Mobile App", "Cloud Solution", "UI/UX Design"];
+  const filters = ["All", "Web Application", "Mobile App", "UI/UX Design"];
 
   const filteredProjects = activeFilter === "All" ? projects : projects.filter((p) => p.category === activeFilter);
 
