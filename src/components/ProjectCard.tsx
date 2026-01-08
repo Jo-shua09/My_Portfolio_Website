@@ -1,7 +1,8 @@
 import { Card } from "@/components/ui/card";
-import { ExternalLink, X } from "lucide-react";
-import { useState } from "react";
+import { ExternalLink } from "lucide-react";
+import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import { AlertDialog, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from "./ui/alert-dialog";
 
 interface ProjectCardProps {
@@ -18,7 +19,18 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ title, description, image, tags, category, live, github, index, type }: ProjectCardProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
   const isEven = index % 2 === 0;
+
+  useEffect(() => {
+    if (isModalOpen) {
+      const timer = setTimeout(() => {
+        setIsModalOpen(false);
+        navigate("/portfolio");
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [isModalOpen, navigate]);
 
   return (
     <div className="cursor-pointer">
@@ -90,13 +102,12 @@ const ProjectCard = ({ title, description, image, tags, category, live, github, 
       </Card>
 
       <AlertDialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <AlertDialogContent className="relative">
-          <button className="absolute top-2 right-2 p-1 rounded-full hover:bg-muted transition-colors" onClick={() => setIsModalOpen(false)}>
-            <X className="w-4 h-4" />
-          </button>
+        <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Repository is Private</AlertDialogTitle>
-            <AlertDialogDescription>This repository is private and cannot be accessed.</AlertDialogDescription>
+            <AlertDialogDescription>
+              This repository is private and cannot be accessed. You will be redirected to the portfolio page shortly.
+            </AlertDialogDescription>
           </AlertDialogHeader>
         </AlertDialogContent>
       </AlertDialog>
