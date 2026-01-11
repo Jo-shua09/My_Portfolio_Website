@@ -77,7 +77,7 @@ const Services = () => {
               }}
               pagination={true}
               modules={[EffectCoverflow, Pagination]}
-              className="mySwiper pt-10 pb-10"
+              className="mySwiper pt-12 pb-10"
             >
               {services.map((service, index) => (
                 <SwiperSlide key={service.title}>
