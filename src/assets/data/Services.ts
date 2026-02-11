@@ -58,7 +58,7 @@ export const services = [
     icon: Globe,
     title: "WordPress Development",
     description:
-      "Expert WordPress solutions ranging from custom theme development to plugin integration. We build secure, high-performance websites that are easy to manage.",
+      "Expert WordPress solutions ranging from custom theme development to plugin integration. I build secure, high-performance websites that are easy to manage.",
     status: "Active",
   },
 ];
