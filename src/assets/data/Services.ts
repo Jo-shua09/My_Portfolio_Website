@@ -1,4 +1,4 @@
-import { Code2, Smartphone, Cloud, Palette, Database, Shield, Zap, Settings, Brush } from "lucide-react";
+import { Code2, Smartphone, Cloud, Palette, Database, Shield, Zap, Settings, Brush, Globe } from "lucide-react";
 
 export const services = [
   {
@@ -52,6 +52,13 @@ export const services = [
     title: "Graphic Design",
     description:
       "Creative visual design solutions including branding, marketing materials, illustrations, and digital graphics that capture your brand essence.",
+    status: "Active",
+  },
+  {
+    icon: Globe,
+    title: "WordPress Development",
+    description:
+      "Expert WordPress solutions ranging from custom theme development to plugin integration. We build secure, high-performance websites that are easy to manage.",
     status: "Active",
   },
 ];
