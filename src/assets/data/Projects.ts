@@ -9,6 +9,7 @@ import solstice from "@/assets/images/solstice.png";
 import envoyroute from "@/assets/images/envoyroute.png";
 import judeiria from "@/assets/images/judeiria.jpeg";
 import boukar from "@/assets/images/boukar.jpeg";
+import benodynamic from "@/assets/images/benodynamic.png";
 
 export const projects = [
   {
@@ -152,6 +153,18 @@ export const projects = [
     category: "Web Application",
     live: "https://edmoss.vercel.app",
     github: "https://github.com/Jo-shua09/Edmoss_landingPage",
+    type: "client",
+  },
+  {
+    id: "12",
+    title: "Beno Dynamic Concept Website",
+    description:
+      'A modern, responsive React application for Beno Dynamic Concept Nig., showcasing Nigeria\'s premier executive transportation and professionally trained security drivers. Built with cutting-edge web technologies for optimal performance and user experience.\n\n## 🌟 Features\n\n### Core Functionality\n\n- **Multi-Page Website**: Home, About, Services, and Contact pages with seamless navigation\n- **Responsive Design**: Fully responsive across all devices (mobile, tablet, desktop)\n- **Interactive Contact Form**: Multi-step booking form with WhatsApp integration for instant inquiries\n- **Modern UI/UX**: Glassmorphism effects, smooth animations, and professional design\n\n### Technical Features\n\n- **Type-Safe Development**: Full TypeScript implementation for robust code\n- **Fast Performance**: Vite-powered build system with optimized production builds\n- **Component Library**: shadcn/ui components for consistent, accessible UI\n- **Routing**: Client-side routing with React Router for SPA experience\n- **Form Handling**: Advanced form management with validation and error handling\n- **Toast Notifications**: User feedback with customizable toast messages\n\n### Business Features\n\n- **Service Showcase**: Detailed presentation of executive driver services\n- **Company Story**: Timeline and milestones of Beno Dynamic Concept\n- **Driver Training Info**: Comprehensive information about " Driver" training program\n- **Contact Integration**: Direct WhatsApp messaging for booking inquiries\n- **SEO Optimized**: Meta tags and structured content for search engines\n\n## 🛠️ Technologies Used\n\n### Frontend Framework\n\n- **React 18.3.1** - Modern UI library with hooks and concurrent features\n- **TypeScript 5.8.3** - Type-safe JavaScript for better development experience\n- **Vite 5.4.19** - Fast build tool and development server\n\n### UI & Styling\n\n- **Tailwind CSS 3.4.17** - Utility-first CSS framework\n- **shadcn/ui** - High-quality, accessible UI components built on Radix UI\n- **Lucide React** - Beautiful & consistent icon library\n- **Tailwind Animate** - Animation utilities for Tailwind CSS\n\n### Development Tools\n\n- **ESLint** - Code linting and formatting\n- **PostCSS** - CSS processing and optimization\n- **Autoprefixer** - Automatic CSS vendor prefixing\n\n### Additional Libraries\n\n- **React Router DOM 6.30.1** - Declarative routing for React\n- **React Hook Form 7.61.1** - Performant forms with easy validation\n- **@tanstack/react-query 5.83.0** - Powerful data synchronization for React\n- **Zod 3.25.76** - TypeScript-first schema validation\n- **date-fns 3.6.0** - Modern JavaScript date utility library',
+    image: benodynamic,
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Lucide React", "React Router DOM", "React Hook Form", "Zod"],
+    category: "Web Application",
+    live: "https://benoconcept.vercel.app/",
+    github: "https://github.com/Jo-shua09/Beno-Dynamic-Concept",
     type: "client",
   },
 ];
