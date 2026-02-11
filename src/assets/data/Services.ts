@@ -80,4 +80,5 @@ export const techStack = [
   { name: "Postman", img: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
   { name: "shadcn/ui", img: "https://images.seeklogo.com/logo-png/51/1/shadcn-ui-logo-png_seeklogo-519786.png" },
   { name: "Appwrite", img: "https://icon.icepanel.io/Technology/svg/Appwrite.svg" },
+  { name: "Elementor", img: "https://raw.githubusercontent.com/pheralb/svgl/main/static/library/elementor.svg" },
 ];
