@@ -38,7 +38,6 @@ const ProjectCard = ({ title, description, image, tags, category, live, github, 
         className={`group relative md:flex w-full items-center max-w-6xl m-auto h-full overflow-hidden bg-card border-border hover:border-primary transition-all duration-500 ${
           isEven ? "md:flex-row-reverse" : ""
         }`}
-        onClick={() => window.open(live, "_blank")}
       >
         <div className="aspect-video relative overflow-hidden bg-muted w-full">
           <img
