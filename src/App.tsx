@@ -15,6 +15,7 @@ import Loader from "./components/Loader";
 import ThemeToggle from "./components/ThemeToggle";
 import useScrollToTop from "./hooks/useScrollToTop";
 import { Analytics } from "@vercel/analytics/react";
+import { HelmetProvider } from "react-helmet-async";
 
 const queryClient = new QueryClient();
 
@@ -48,21 +49,23 @@ const App = () => {
   }, []);
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <Analytics />
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        {isLoading ? (
-          <Loader />
-        ) : (
-          <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-            <AppContent />
-            <ThemeToggle />
-          </BrowserRouter>
-        )}
-      </TooltipProvider>
-    </QueryClientProvider>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <Analytics />
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+              <AppContent />
+              <ThemeToggle />
+            </BrowserRouter>
+          )}
+        </TooltipProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
   );
 };
 

@@ -8,7 +8,7 @@ import edmoss from "@/assets/images/edmoss.jpg";
 import solstice from "@/assets/images/solstice.png";
 import envoyroute from "@/assets/images/envoyroute.png";
 import judeiria from "@/assets/images/judeiria.jpeg";
-import boukar from "@/assets/images/boukar.jpeg";
+import boukar from "@/assets/images/boukar.png";
 import benodynamic from "@/assets/images/benodynamic.png";
 
 export const projects = [
@@ -16,7 +16,7 @@ export const projects = [
     id: "1",
     title: "Beno Dynamic Concept Website",
     description:
-      "A modern, responsive React application for Beno Dynamic Concept Nig., showcasing Nigeria's premier executive transportation and professionally trained security drivers. Built with cutting-edge web technologies for optimal performance and user experience, the site features a sleek design, intuitive navigation, and comprehensive information about services offered. It serves as a digital gateway for clients to explore transportation solutions and connect with the company's expertise in executive travel and security.",
+      "Engineered a high-performance corporate platform for Beno Dynamic Concept Nig., Nigeria's premier executive transportation and security service. This modern React application features a sleek UI, intuitive navigation, and seamless user experience, serving as a powerful digital gateway for client acquisition and showcasing the company's elite travel solutions.",
     image: benodynamic,
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Lucide React", "React Router DOM", "React Hook Form", "Zod"],
     category: "Web Application",
@@ -28,7 +28,7 @@ export const projects = [
     id: "2",
     title: "Judeiria - Business Consultant Website",
     description:
-      "A modern, responsive website for Jude Iria, a Business Consultant, Career Coach, and Brand & Growth Strategist. The site showcases services, testimonials, and provides an easy way for clients to book consultations and get in touch. Built with React 18, TypeScript, Vite, Tailwind CSS, shadcn/ui, Framer Motion, React Router DOM, and EmailJS for contact integration.",
+      "Developed a dynamic personal brand website for Jude Iria, a top-tier Business Consultant and Growth Strategist. The platform highlights professional services and client success stories through smooth Framer Motion animations, while integrating seamless consultation booking and secure communication channels to drive lead generation.",
     image: judeiria,
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Framer Motion", "React Router DOM", "EmailJS"],
     category: "Web Application",
@@ -40,7 +40,7 @@ export const projects = [
     id: "3",
     title: "BoukarTech - Leading Tech Solutions & Software Development Company",
     description:
-      "BoukarTech is a cutting-edge technology company specializing in software development, web applications, mobile apps, and digital transformation solutions. Based in Lagos, Nigeria, we empower businesses worldwide with innovative technology and creative excellence. Services include software development, web development, mobile app development, livestreaming solutions, graphic design, video editing, hosting & domain services, and ads specialist. Built with React 18, TypeScript, Vite, Tailwind CSS, shadcn/ui, Lucide React, Framer Motion, React Router, and EmailJS.",
+      "Architected the official corporate website for BoukarTech, a leading digital transformation agency. Designed to highlight a diverse portfolio of tech solutions—from web development to digital marketing—the site employs modern React architectures and immersive animations to engage global enterprises and drive B2B partnerships.",
     image: boukar,
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Lucide React", "Framer Motion", "React Router", "EmailJS"],
     category: "Web Application",
@@ -52,7 +52,7 @@ export const projects = [
     id: "4",
     title: "Vitalink - Healthcare Management Platform",
     description:
-      "A comprehensive healthcare management platform built with React, TypeScript, and Vite that connects patients and doctors through an intuitive web interface. Vitalink enables seamless health monitoring, patient management, and AI-powered health insights. This winning hackathon project from Codefest features role-based authentication, real-time vital monitoring, and a culturally aware multilingual AI chatbot supporting English, Pidgin, and Hausa.",
+      "A Codefest Hackathon-winning healthcare management platform connecting patients and medical professionals. Vitalink revolutionizes digital health with real-time vitals monitoring, role-based access, and a culturally-aware Gemini AI chatbot (supporting English, Pidgin, and Hausa) to provide accessible, intelligent, and seamless health insights.",
     image: vitalink,
     tags: [
       "React",
@@ -75,7 +75,7 @@ export const projects = [
     id: "5",
     title: "Maglo - Financial Management Dashboard",
     description:
-      "Maglo Finance Dashboard is a modern, responsive financial management web application designed to help users track their financial transactions, manage invoices, and monitor wallet balances. Built with React and TypeScript, it features a clean, intuitive interface with real-time data visualization and robust state management.",
+      "A comprehensive financial management dashboard built to simplify personal and business finance tracking. Maglo provides real-time data visualization, invoice management, and wallet monitoring through a robust React and Appwrite architecture, delivering a highly secure, intuitive, and responsive user experience.",
     image: maglo,
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Appwrite", "React Query", "Recharts", "React Hook Form", "Zod"],
     category: "Web Application",
@@ -87,7 +87,7 @@ export const projects = [
     id: "6",
     title: "EnvoyRoute Global Transit",
     description:
-      "A comprehensive, modern React-based web application for EnvoyRoute Global Courier & Logistics Service. This platform provides a seamless user experience for customers to explore services, request quotes, track shipments, and manage logistics needs. Built with cutting-edge technologies to ensure fast performance, accessibility, and scalability.",
+      "Designed and developed a scalable logistics platform for EnvoyRoute Global Courier. The application streamlines complex shipping processes by allowing users to effortlessly track parcels, request detailed quotes, and manage global transit needs through an ultra-fast, accessible, and modern web interface.",
     image: envoyroute,
     tags: ["Vite", "TypeScript", "React", "shadcn/ui", "Tailwind CSS", "React Router", "React Hook Form", "Zod", "React Query"],
     category: "Web Application",
@@ -99,7 +99,7 @@ export const projects = [
     id: "7",
     title: "Solstice Sanctuary",
     description:
-      "A modern, responsive website for Solstice Sanctuary, a luxurious spa offering a variety of wellness services including massages, facials, hydrotherapy, and body treatments. The site provides an immersive experience to book appointments, explore services, and learn about the spa's philosophy.",
+      "Crafted an immersive digital experience for Solstice Sanctuary, a luxury wellness and spa retreat. The responsive platform encapsulates the spa’s serene atmosphere, offering users an elegant interface to explore premium therapeutic treatments, read about holistic philosophies, and securely book appointments online.",
     image: solstice,
     tags: ["Vite", "TypeScript", "React", "shadcn-ui", "Tailwind CSS", "React Router"],
     category: "Web Application",
@@ -111,7 +111,7 @@ export const projects = [
     id: "8",
     title: "IBLCDA CDA Street Registry",
     description:
-      "A comprehensive web platform for the Igbogbo Baiyeku Local Council Development Association (IBLCDA) CDA, Street Registry. This system provides a centralized database for managing and tracking Community Development Area (CDA) street registrations, enabling efficient administration and public access to street information across various communities.",
+      "Developed a centralized civic management system for the Igbogbo Baiyeku Local Council (IBLCDA). This robust street registry platform digitizes the tracking and administration of Community Development Areas (CDAs), streamlining local governance and providing citizens with accessible, transparent street information.",
     image: iblcda,
     tags: ["React", "Tailwind CSS", "Firebase", "Framer Motion", "React Hook Form"],
     category: "Web Application",
@@ -123,7 +123,7 @@ export const projects = [
     id: "9",
     title: "Estantien - Luxury Real Estate Platform",
     description:
-      "Estantien is a sophisticated web platform designed for luxury real estate, offering an exclusive gateway to premium properties. It provides users with advanced search capabilities, virtual tours, and a curated selection of high-end homes, apartments, and commercial properties. The platform aims to connect discerning clients with their dream properties through a seamless and personalized browsing experience.",
+      "An exclusive real estate platform dedicated to high-end property discovery. Estantien offers discerning buyers a curated catalog of luxury homes, featuring advanced search filters, rich virtual tours, and a highly polished UI. The platform redefines property browsing by prioritizing elegance, speed, and personalized user journeys.",
     image: estantien,
     tags: ["React", "Tailwind CSS", "Material-UI", "Swiper", "Mockaroo", "AOS"],
     category: "Web Application",
@@ -135,7 +135,7 @@ export const projects = [
     id: "10",
     title: "Kicks - Online Sneaker & Footwear Store",
     description:
-      "Kicks is an e-commerce platform designed as a premier destination for trendy and comfortable footwear. It offers a diverse collection of the latest sneakers, boots, and athletic shoes, providing a seamless online shopping experience for customers looking for their perfect pair.",
+      "A full-featured e-commerce storefront specializing in premium sneakers and athletic footwear. Kicks integrates secure state management via Redux with a visually striking, mobile-first design, ensuring a frictionless shopping journey from product discovery through to an optimized checkout process.",
     image: kicks,
     tags: ["React", "Tailwind CSS", "Material-UI", "Swiper", "AOS", "Redux"],
     category: "Web Application",
@@ -147,7 +147,7 @@ export const projects = [
     id: "11",
     title: "RentChain - Decentralized Renting & Property Management Platform",
     description:
-      "In collaboration with @emmyhack, Rentchain is an innovative blockchain-based web platform built on the Morph network, designed to revolutionize residential and commercial rent payments and property management. It offers a secure, transparent, and efficient solution for both landlords and tenants globally, leveraging decentralized technology to streamline transactions and interactions.",
+      "A pioneering Web3 property management platform built on the Morph network. Developed collaboratively, RentChain leverages blockchain technology to decentralize and secure global rent payments. It offers landlords and tenants unmatched transparency, automated smart contract transactions, and a unified dashboard for modern property administration.",
     image: rentchain,
     tags: ["React", "Tailwind CSS"],
     category: "Web Application",
@@ -159,7 +159,7 @@ export const projects = [
     id: "12",
     title: "EDMOSS - Business Growth Consulting Landing Page",
     description:
-      "This project is the landing page for EDMOSS, a leading business consultancy firm based in Nigeria. The page is designed to serve as the primary digital gateway for the company, effectively showcasing its expertise in strategic growth, digital transformation, and operational excellence, specifically targeting Nigerian and broader African enterprises. It aims to establish EDMOSS as a trusted partner for businesses seeking sustainable growth and strategic advisory.",
+      "Engineered a high-conversion landing page for EDMOSS, a premier African business consultancy firm. The digital gateway highlights the company’s authority in strategic growth and digital transformation, utilizing compelling copy and a highly optimized, responsive design to convert enterprise leads and build trust across the continent.",
     image: edmoss,
     tags: ["React", "Tailwind CSS"],
     category: "Web Application",

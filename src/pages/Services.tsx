@@ -10,12 +10,18 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCoverflow, Pagination, Autoplay, Navigation as SwiperNavigation } from "swiper/modules";
 import { services, techStack } from "@/assets/data/Services";
+import SEO from "@/components/SEO";
 
 const Services = () => {
   const [servicesSwiper, setServicesSwiper] = useState(null);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Services"
+        description="Comprehensive software development services designed to transform your business by Joshua Onyeka."
+        url="https://joshwebfolio.vercel.app/services"
+      />
       <Navigation />
 
       {/* Hero */}

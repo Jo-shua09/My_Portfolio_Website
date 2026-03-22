@@ -11,6 +11,7 @@ import { projects } from "@/assets/data/Projects";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SEO from "@/components/SEO";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,6 +40,11 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Home"
+        description="Joshua Onyeka - Software Engineer Portfolio. Architecting Digital Futures."
+        url="https://joshwebfolio.vercel.app/"
+      />
       <Navigation />
 
       {/* Hero Section */}
@@ -54,7 +60,7 @@ const Home = () => {
             <h1 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in-up">Elevating Ideas. Building Tomorrow's Software Today.</h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-12 animate-fade-in md:leading-relaxed" style={{ animationDelay: "200ms" }}>
-              As a dedicated Software Developer, I build the core of innovation. My work combines meticulous engineering with insightful design to
+              As a dedicated Software Engineer, I build the core of innovation. My work combines meticulous engineering with insightful design to
               create powerful, user-centric platforms designed for seamless operation and lasting impact.
             </p>
 

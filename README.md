@@ -1,6 +1,6 @@
 # Joshua Onyeka - Portfolio
 
-A modern, responsive personal portfolio website showcasing my work as a software developer. Built with React, TypeScript, and Tailwind CSS for a sleek and interactive user experience.
+A modern, responsive personal portfolio website showcasing my work as a Software Engineer. Built with React, TypeScript, and Tailwind CSS for a sleek and interactive user experience.
 
 ## 🚀 Features
 

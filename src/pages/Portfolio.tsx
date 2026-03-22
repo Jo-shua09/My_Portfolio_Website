@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/assets/data/Projects";
+import SEO from "@/components/SEO";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,6 +35,11 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Portfolio"
+        description="Explore the portfolio of Joshua Onyeka showcasing successful projects across industries."
+        url="https://joshwebfolio.vercel.app/portfolio"
+      />
       <Navigation />
 
       {/* Hero */}

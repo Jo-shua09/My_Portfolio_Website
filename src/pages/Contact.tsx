@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -71,6 +72,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Contact"
+        description="Get in touch with Joshua Onyeka to start building your next amazing digital project."
+        url="https://joshwebfolio.vercel.app/contact"
+      />
       <Navigation />
 
       {/* Hero */}

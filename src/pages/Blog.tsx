@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 interface MediumPost {
   title: string;
@@ -38,7 +39,7 @@ const Blog = () => {
               pubDate: item.pubDate,
               description: item.description.replace(/<[^>]*>/g, "").substring(0, 200) + "...",
               categories: item.categories || [],
-            })
+            }),
           );
 
           setPosts(formattedPosts);
@@ -65,6 +66,11 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Blog"
+        description="Read the latest insights and thoughts on software development and technology from Joshua Onyeka."
+        url="https://joshwebfolio.vercel.app/blog"
+      />
       <Navigation />
 
       {/* Hero */}

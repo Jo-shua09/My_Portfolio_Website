@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { techStack } from "@/assets/data/Services";
+import SEO from "@/components/SEO";
 
 const About = () => {
   const values = [
@@ -26,6 +27,11 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="About Me"
+        description="Learn more about Joshua Onyeka, a passionate Software Engineer dedicated to building digital products."
+        url="https://joshwebfolio.vercel.app/about"
+      />
       <Navigation />
 
       {/* Hero */}
@@ -36,7 +42,7 @@ const About = () => {
               About <span className="text-gradient">Me</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground animate-fade-in" style={{ animationDelay: "200ms" }}>
-              I'm a passionate software developer and designer dedicated to building digital products that make a real impact.
+              I'm a passionate Software Engineer and designer dedicated to building digital products that make a real impact.
             </p>
           </div>
         </div>
