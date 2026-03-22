@@ -73,8 +73,10 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Contact"
+        title="Contact | Joshua Onyeka - Software Engineer"
         description="Get in touch with Joshua Onyeka to start building your next amazing digital project."
+        keywords={["contact", "hire software engineer", "freelance developer", "web development project", "joshua onyeka contact", "tech consulting"]}
+        image="https://joshwebfolio.vercel.app/og-image-contact.jpg"
         url="https://joshwebfolio.vercel.app/contact"
       />
       <Navigation />

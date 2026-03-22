@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import ServiceCard from "@/components/ServiceCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -10,7 +11,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectCoverflow, Pagination, Autoplay, Navigation as SwiperNavigation } from "swiper/modules";
 import { services, techStack } from "@/assets/data/Services";
-import SEO from "@/components/SEO";
 
 const Services = () => {
   const [servicesSwiper, setServicesSwiper] = useState(null);
@@ -18,10 +18,22 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Services"
-        description="Comprehensive software development services designed to transform your business by Joshua Onyeka."
+        title="Services | Joshua Onyeka - Software Development"
+        description="Comprehensive software development services including web development, mobile apps, UI/UX design, SEO optimization, API integration, and performance optimization."
+        keywords={[
+          "services",
+          "web development",
+          "mobile development",
+          "ui/ux design",
+          "seo optimization",
+          "api integration",
+          "software services",
+          "freelance developer",
+        ]}
+        image="https://joshwebfolio.vercel.app/og-image-services.jpg"
         url="https://joshwebfolio.vercel.app/services"
       />
+
       <Navigation />
 
       {/* Hero */}

@@ -67,8 +67,10 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Blog"
+        title="Blog | Joshua Onyeka - Software Engineer"
         description="Read the latest insights and thoughts on software development and technology from Joshua Onyeka."
+        keywords={["blog", "software development blog", "tech insights", "react tutorials", "next.js tips", "programming articles"]}
+        image="https://joshwebfolio.vercel.app/og-image-blog.jpg"
         url="https://joshwebfolio.vercel.app/blog"
       />
       <Navigation />

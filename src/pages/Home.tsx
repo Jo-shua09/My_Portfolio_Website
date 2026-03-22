@@ -3,6 +3,8 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import InfiniteMarquee from "@/components/InfiniteMarquee";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import ServiceCard from "@/components/ServiceCard";
 import ProjectCard from "@/components/ProjectCard";
@@ -11,7 +13,6 @@ import { projects } from "@/assets/data/Projects";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SEO from "@/components/SEO";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,10 +42,13 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Home"
-        description="Joshua Onyeka - Software Engineer Portfolio. Architecting Digital Futures."
+        title="Joshua Onyeka | Software Engineer "
+        description="Building exceptional web applications, mobile apps, and digital experiences. React, Next.js, TypeScript, UI/UX specialist delivering scalable solutions."
+        keywords={["software engineer", "web developer", "react", "next.js", "typescript", "ui/ux", "fullstack", "portfolio", "freelance developer"]}
+        image="https://joshwebfolio.vercel.app/og-image-home.jpg"
         url="https://joshwebfolio.vercel.app/"
       />
+
       <Navigation />
 
       {/* Hero Section */}
@@ -77,6 +81,19 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Technologies Marquee */}
+      <section className="py-16 relative overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-10">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+              Powered By <span className="text-gradient">Modern Tech</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Cutting-edge technologies driving exceptional digital experiences</p>
+          </div>
+        </div>
+        <InfiniteMarquee />
       </section>
 
       {/* Services Overview */}

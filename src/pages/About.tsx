@@ -1,10 +1,10 @@
 import { CheckCircle2, Download, Target, Users, Zap } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { techStack } from "@/assets/data/Services";
-import SEO from "@/components/SEO";
 
 const About = () => {
   const values = [
@@ -28,10 +28,23 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="About Me"
-        description="Learn more about Joshua Onyeka, a passionate Software Engineer dedicated to building digital products."
+        title="About Joshua Onyeka | Software Engineer "
+        description="3+ years experience building digital products. Skills in React, Next.js, TypeScript, UI/UX design. Hackathon winner passionate about clean code and user experiences."
+        keywords={[
+          "about",
+          "software engineer",
+          "joshua onyeka",
+          "ui/ux designer",
+          "react developer",
+          "fullstack",
+          "skills",
+          "experience",
+          "portfolio",
+        ]}
+        image="https://joshwebfolio.vercel.app/og-image-about.jpg"
         url="https://joshwebfolio.vercel.app/about"
       />
+
       <Navigation />
 
       {/* Hero */}

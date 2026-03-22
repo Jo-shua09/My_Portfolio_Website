@@ -11,7 +11,12 @@ const NotFound = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <SEO title="Page Not Found" description="The page you are looking for does not exist." />
+      <SEO
+        title="Page Not Found | Joshua Onyeka"
+        description="The page you are looking for does not exist."
+        image="https://joshwebfolio.vercel.app/og-image.jpg"
+        url="https://joshwebfolio.vercel.app/404"
+      />
       <div className="text-center">
         <h1 className="mb-4 text-4xl font-bold">404</h1>
         <p className="mb-4 text-xl text-gray-600">Oops! Page not found</p>

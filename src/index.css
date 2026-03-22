@@ -161,8 +161,41 @@ All colors MUST be HSL.
   }
 
   .grid-pattern {
-    background-image: linear-gradient(hsla(0, 0%, 98%, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, hsla(0, 0%, 98%, 0.03) 1px, transparent 1px);
+    background-image:
+      linear-gradient(hsla(0, 0%, 98%, 0.03) 1px, transparent 1px), linear-gradient(90deg, hsla(0, 0%, 98%, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
+  }
+
+  /* Infinite Marquee Animations - site aesthetic */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-33.333%);
+    }
+  }
+
+  @keyframes marquee-reverse {
+    0% {
+      transform: translateX(-33.333%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+
+  .animate-marquee-reverse {
+    animation: marquee-reverse 40s linear infinite;
+  }
+
+  /* Pause on hover for better UX */
+  .animate-marquee:hover,
+  .animate-marquee-reverse:hover {
+    animation-play-state: paused;
   }
 }
