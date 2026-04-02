@@ -29,7 +29,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="About Joshua Onyeka | Software Engineer "
-        description="3+ years experience building digital products. Skills in React, Next.js, TypeScript, UI/UX design. Hackathon winner passionate about clean code and user experiences."
+        description="Years of experience building digital products. Skills in React, Next.js, TypeScript, UI/UX design. Hackathon winner passionate about clean code and user experiences."
         keywords={[
           "about",
           "software engineer",
@@ -71,7 +71,7 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p className="text-lg leading-relaxed">
-                  For over 3+ years, I've honed my skills building digital products, thriving in collaborative teams. This journey includes a proud
+                  For the past years, I've honed my skills building digital products, thriving in collaborative teams. This journey includes a proud
                   hackathon victory with my team. My unwavering philosophy: software development isn't just a service; it's a dedicated craft that
                   demands passion and precision.
                 </p>
