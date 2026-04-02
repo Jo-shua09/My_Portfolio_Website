@@ -15,7 +15,7 @@ import talentCanvas from "@/assets/images/talentCanvas.png";
 export const projects = [
   {
     id: "1",
-    title: "TalentCanvas | Full-Stack Creative Showcase Platform",
+    title: "TalentCanvas - Full-Stack Creative Showcase Platform",
     description:
       "TalentCanvas is a dynamic portfolio hosting service designed specifically for creators to bridge the gap between raw talent and professional opportunities. It streamlines the way artists, developers, and designers present their work through a highly customizable, performance-oriented interface.",
     image: talentCanvas,
