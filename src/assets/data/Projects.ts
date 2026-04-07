@@ -11,6 +11,12 @@ import judeiria from "@/assets/images/judeiria.jpeg";
 import boukar from "@/assets/images/boukar.png";
 import benodynamic from "@/assets/images/benodynamic.png";
 import talentCanvas from "@/assets/images/talentCanvas.png";
+import streamview1 from "@/assets/images/streamview-1.png";
+import streamview2 from "@/assets/images/streamview-2.png";
+import streamview3 from "@/assets/images/streamview-3.png";
+import streamview4 from "@/assets/images/streamview-4.png";
+import streamview5 from "@/assets/images/streamview-5.png";
+import streamview6 from "@/assets/images/streamview-6.png";
 
 export const projects = [
   {
@@ -194,5 +200,20 @@ export const projects = [
     live: "https://edmoss.vercel.app",
     github: "https://github.com/Jo-shua09/Edmoss_landingPage",
     type: "client",
+  },
+];
+
+export const mobileProjects = [
+  {
+    id: "m1",
+    title: "StreamView 🎬",
+    description:
+      "StreamView is a modern, feature-rich movie streaming and discovery application built with Flutter and powered by GetX for robust state management and routing. It consumes the OMDb API to dynamically fetch, search, and display comprehensive movie data including plots, cast, ratings, and posters.",
+    images: [streamview1, streamview2, streamview3, streamview4, streamview5, streamview6],
+    tags: ["Flutter", "GetX", "Dart", "OMDb API", "http"],
+    category: "Mobile Application",
+    live: "",
+    github: "https://github.com/Jo-shua09/StreamView",
+    type: "personal",
   },
 ];

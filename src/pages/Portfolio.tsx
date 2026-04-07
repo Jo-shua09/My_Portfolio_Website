@@ -5,7 +5,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import ProjectCard from "@/components/ProjectCard";
-import { projects } from "@/assets/data/Projects";
+import { MobileProjectCard } from "@/components/MobileProjectCard";
+import { projects, mobileProjects } from "@/assets/data/Projects";
+import { Button } from "@/components/ui/button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,25 +15,41 @@ const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const projectRefs = useRef<HTMLDivElement[]>([]);
 
-  const filters = ["All", "Web Application", "Mobile App", "UI/UX Design"];
+  type WebProject = (typeof projects)[number];
+  type MobileProject = (typeof mobileProjects)[number];
+  type PortfolioProject = WebProject | MobileProject;
 
-  const filteredProjects = activeFilter === "All" ? projects : projects.filter((p) => p.category === activeFilter);
+  const filters = ["All", "Web Application", "Mobile Application"];
+
+  const allProjects: PortfolioProject[] = [...projects, ...mobileProjects];
+  const filteredProjects = activeFilter === "All" ? allProjects : allProjects.filter((p) => p.category === activeFilter);
+
+  const isMobileProject = (project: PortfolioProject): project is MobileProject => project.category === "Mobile Application";
 
   useEffect(() => {
-    projectRefs.current.slice(0, -1).forEach((project) => {
-      ScrollTrigger.create({
-        trigger: project,
-        start: "top top",
-        end: "+=50%",
-        pin: project,
-        pinSpacing: false,
+    // Clear stale refs completely before truncation
+    projectRefs.current = [];
+    projectRefs.current = projectRefs.current.slice(0, filteredProjects.length);
+
+    const ctx = gsap.context(() => {
+      projectRefs.current.slice(0, -1).forEach((project) => {
+        if (project) {
+          ScrollTrigger.create({
+            trigger: project,
+            start: "top bottom",
+            end: "bottom top",
+            pin: project,
+            pinSpacing: false,
+            once: true,
+          });
+        }
       });
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ctx.revert();
     };
-  }, [filteredProjects]);
+  }, [activeFilter]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -70,7 +88,7 @@ const Portfolio = () => {
       </section>
 
       {/* Filters */}
-      {/* <section className="py-8 bg-card/30 sticky top-20 z-40 backdrop-blur-xl border-b border-border">
+      <section className="py-8 bg-card/30">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-3">
             {filters.map((filter) => (
@@ -85,7 +103,7 @@ const Portfolio = () => {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Projects Grid */}
       <section className="py-20">
@@ -100,7 +118,11 @@ const Portfolio = () => {
                 className="animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <ProjectCard {...project} live={project.live ?? ""} github={project.github ?? ""} index={index} />
+                {isMobileProject(project) ? (
+                  <MobileProjectCard project={project} />
+                ) : (
+                  <ProjectCard {...project} live={project.live ?? ""} github={project.github ?? ""} index={index} />
+                )}
               </div>
             ))}
           </div>

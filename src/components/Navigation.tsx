@@ -20,8 +20,8 @@ const Navigation = () => {
 
   const navLinks = [
     { name: "Home", path: "/", icon: Home },
-    { name: "Services", path: "/services", icon: Cog },
     { name: "About", path: "/about", icon: User },
+    { name: "Services", path: "/services", icon: Cog },
     { name: "Portfolio", path: "/portfolio", icon: Briefcase },
     { name: "Blog", path: "/blog", icon: BookOpen },
     { name: "Contact", path: "/contact", icon: Mail },
