@@ -57,7 +57,7 @@ const Home = () => {
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block mb-6 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full animate-fade-in">
+            <div className="inline-block mt-4 mb-6 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full animate-fade-in">
               <span className="text-primary font-medium font-mono text-xs md:text-sm">Architecting Digital Futures</span>
             </div>
 
