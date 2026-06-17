@@ -3,7 +3,7 @@ import maglo from "@/assets/images/projects/maglo.jpeg";
 import iblcda from "@/assets/images/projects/iblcda.jpg";
 import estantien from "@/assets/images/projects/estantien.jpg";
 import kicks from "@/assets/images/projects/kickss.jpg";
-import rentchain from "@/assets/images/projects/rent-chain.jpg";
+import areahustle from "@/assets/images/projects/areahustle.png";
 import edmoss from "@/assets/images/projects/edmoss.jpg";
 import solstice from "@/assets/images/projects/solstice.png";
 import envoyroute from "@/assets/images/projects/envoyroute.png";
@@ -21,30 +21,15 @@ import streamview6 from "@/assets/images/projects/streamview-6.png";
 export const projects = [
   {
     id: "1",
-    title: "TalentCanvas - Full-Stack Creative Showcase Platform",
+    title: "AreaHustle - Voice-first hyper-local gig marketplace",
     description:
-      "TalentCanvas is a dynamic portfolio hosting service designed specifically for creators to bridge the gap between raw talent and professional opportunities. It streamlines the way artists, developers, and designers present their work through a highly customizable, performance-oriented interface.",
-    image: talentCanvas,
-    tags: [
-      "React",
-      "TypeScript",
-      "Vite",
-      "Tailwind CSS",
-      "shadcn/ui",
-      "React Query",
-      "React Router DOM",
-      "Lucide React",
-      "Recharts",
-      "React Hook Form",
-      "Zod",
-      "Framer Motion",
-      "React Helmet Async",
-      "Firebase",
-    ],
+      "AreaHustle is a voice-first hyper-local gig marketplace that turns informal work into bankable creditworthiness proof. It leverages Voice-first AI to bridge the digital literacy gap, allowing middle-class households and small businesses to post tasks, and informal workers (Hustlers) to build a verified financial identity that unlocks credit access.",
+    image: areahustle,
+    tags: ["React", "Vite", "TypeScript", "Tailwind CSS", "FastAPI", "MongoDB", "Aethex API", "Google Gemini Flash", "Lucide React"],
     category: "Web Application",
-    live: "https://talentcanvas.vercel.app/",
-    github: "https://github.com/Jo-shua09/TalentCanvas",
-    type: "personal",
+    live: "https://area-hustle.vercel.app/",
+    github: "https://github.com/Jo-shua09/AreaHustle",
+    type: "hackathon",
   },
   {
     id: "2",
@@ -179,18 +164,6 @@ export const projects = [
   },
   {
     id: "12",
-    title: "RentChain - Decentralized Renting & Property Management Platform",
-    description:
-      "A pioneering Web3 property management platform built on the Morph network. Developed collaboratively, RentChain leverages blockchain technology to decentralize and secure global rent payments. It offers landlords and tenants unmatched transparency, automated smart contract transactions, and a unified dashboard for modern property administration.",
-    image: rentchain,
-    tags: ["React", "Tailwind CSS"],
-    category: "Web Application",
-    live: "https://rent-chain.vercel.app",
-    github: "https://github.com/Emmyhack/Morph-RentChain",
-    type: "hackathon",
-  },
-  {
-    id: "13",
     title: "EDMOSS - Business Growth Consulting Landing Page",
     description:
       "Engineered a high-conversion landing page for EDMOSS, a premier African business consultancy firm. The digital gateway highlights the company’s authority in strategic growth and digital transformation, utilizing compelling copy and a highly optimized, responsive design to convert enterprise leads and build trust across the continent.",
