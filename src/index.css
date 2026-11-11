@@ -103,9 +103,17 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
     font-family: "Outfit", sans-serif;
+    font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+    line-height: 1.7;
+    text-rendering: optimizeLegibility;
   }
 
   h1,
@@ -116,7 +124,24 @@ All colors MUST be HSL.
   h6 {
     font-family: "Space Mono", monospace;
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 5.25rem);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 3vw, 3.5rem);
+  }
+
+  h3 {
+    font-size: clamp(1.35rem, 2vw, 2.2rem);
+  }
+
+  p {
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
   }
 }
 
@@ -133,8 +158,53 @@ All colors MUST be HSL.
     @apply transition-transform duration-300 hover:-translate-y-2;
   }
 
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out both;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .project-card-enter {
+    animation: projectReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
   .animate-float {
     animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes projectReveal {
+    from {
+      opacity: 0;
+      transform: translateY(30px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 
   @keyframes float {
@@ -166,7 +236,6 @@ All colors MUST be HSL.
     background-size: 50px 50px;
   }
 
-  /* Infinite Marquee Animations - site aesthetic */
   @keyframes marquee {
     0% {
       transform: translateX(0);
@@ -193,7 +262,6 @@ All colors MUST be HSL.
     animation: marquee-reverse 40s linear infinite;
   }
 
-  /* Pause on hover for better UX */
   .animate-marquee:hover,
   .animate-marquee-reverse:hover {
     animation-play-state: paused;
