@@ -11,6 +11,7 @@ import judeiria from "@/assets/images/projects/judeiria.jpeg";
 import boukar from "@/assets/images/projects/boukar.png";
 import benodynamic from "@/assets/images/projects/benodynamic.png";
 import enforma from "@/assets/images/projects/enforma.png";
+import verdant from "@/assets/images/projects/verdant.png";
 import streamview1 from "@/assets/images/projects/streamview-1.png";
 import streamview2 from "@/assets/images/projects/streamview-2.png";
 import streamview3 from "@/assets/images/projects/streamview-3.png";
@@ -21,6 +22,18 @@ import streamview6 from "@/assets/images/projects/streamview-6.png";
 export const projects = [
   {
     id: "1",
+    title: "Verdant - Autonomous AI Job Discovery & Application Agent",
+    description:
+      "Architected an autonomous multi-tenant SaaS job agent featuring a multi-platform ATS search dorker, Writer-Critic AI resume tailoring engine, and deterministic PDF compiler. Built a Python Playwright browser automation worker with live manual OTP relay and read-only Gmail IMAP inbox classification on Render and MongoDB.",
+    image: verdant,
+    tags: ["Python", "FastAPI", "Next.js", "TypeScript", "MongoDB", "Google Gemini AI", "Playwright", "Render", "Google OAuth 2.0 / OpenID Connect"],
+    category: "Web Application",
+    live: "https://verdant-agent.vercel.app",
+    github: "https://github.com/Jo-shua09/auto-job-agent",
+    type: "personal",
+  },
+  {
+    id: "2",
     title: "AreaHustle - Voice-first hyper-local gig marketplace",
     description:
       "AreaHustle is a voice-first hyper-local gig marketplace that turns informal work into bankable creditworthiness proof. It leverages Voice-first AI to bridge the digital literacy gap, allowing middle-class households and small businesses to post tasks, and informal workers (Hustlers) to build a verified financial identity that unlocks credit access.",
@@ -32,7 +45,7 @@ export const projects = [
     type: "hackathon",
   },
   {
-    id: "2",
+    id: "3",
     title: "EnForma AI - All-in-one AI Fitness Coach",
     description:
       "Train with precision. The all-in-one AI fitness coach that scans your meals, writes your training plan, and grades your lifting form through your camera. It features real-time AI form coaching, macro meal scanning, personalized training plans, and habit tracking, all delivered through a beautiful and intuitive interface with smooth animations.",
@@ -44,7 +57,7 @@ export const projects = [
     type: "personal",
   },
   {
-    id: "3",
+    id: "4",
     title: "Beno Dynamic Concept Website",
     description:
       "Engineered a high-performance corporate platform for Beno Dynamic Concept Nig., Nigeria's premier executive transportation and security service. This modern React application features a sleek UI, intuitive navigation, and seamless user experience, serving as a powerful digital gateway for client acquisition and showcasing the company's elite travel solutions.",
@@ -56,7 +69,7 @@ export const projects = [
     type: "client",
   },
   {
-    id: "4",
+    id: "5",
     title: "Judeiria - Business Consultant Website",
     description:
       "Developed a dynamic personal brand website for Jude Iria, a top-tier Business Consultant and Growth Strategist. The platform highlights professional services and client success stories through smooth Framer Motion animations, while integrating seamless consultation booking and secure communication channels to drive lead generation.",
@@ -68,7 +81,7 @@ export const projects = [
     type: "client",
   },
   {
-    id: "5",
+    id: "6",
     title: "BoukarTech - Leading Tech Solutions & Software Development Company",
     description:
       "Architected the official corporate website for BoukarTech, a leading digital transformation agency. Designed to highlight a diverse portfolio of tech solutions—from web development to digital marketing—the site employs modern React architectures and immersive animations to engage global enterprises and drive B2B partnerships.",
@@ -80,7 +93,7 @@ export const projects = [
     type: "client",
   },
   {
-    id: "6",
+    id: "7",
     title: "Vitalink - Healthcare Management Platform",
     description:
       "A Codefest Hackathon-winning healthcare management platform connecting patients and medical professionals. Vitalink revolutionizes digital health with real-time vitals monitoring, role-based access, and a culturally-aware Gemini AI chatbot (supporting English, Pidgin, and Hausa) to provide accessible, intelligent, and seamless health insights.",
@@ -103,7 +116,7 @@ export const projects = [
     type: "hackathon",
   },
   {
-    id: "7",
+    id: "8",
     title: "Maglo - Financial Management Dashboard",
     description:
       "A comprehensive financial management dashboard built to simplify personal and business finance tracking. Maglo provides real-time data visualization, invoice management, and wallet monitoring through a robust React and Appwrite architecture, delivering a highly secure, intuitive, and responsive user experience.",
@@ -115,7 +128,7 @@ export const projects = [
     type: "personal",
   },
   {
-    id: "8",
+    id: "9",
     title: "EnvoyRoute Global Transit",
     description:
       "Designed and developed a scalable logistics platform for EnvoyRoute Global Courier. The application streamlines complex shipping processes by allowing users to effortlessly track parcels, request detailed quotes, and manage global transit needs through an ultra-fast, accessible, and modern web interface.",
@@ -127,7 +140,7 @@ export const projects = [
     type: "personal",
   },
   {
-    id: "9",
+    id: "10",
     title: "Solstice Sanctuary",
     description:
       "Crafted an immersive digital experience for Solstice Sanctuary, a luxury wellness and spa retreat. The responsive platform encapsulates the spa’s serene atmosphere, offering users an elegant interface to explore premium therapeutic treatments, read about holistic philosophies, and securely book appointments online.",
@@ -139,7 +152,7 @@ export const projects = [
     type: "personal",
   },
   {
-    id: "10",
+    id: "11",
     title: "IBLCDA CDA Street Registry",
     description:
       "Developed a centralized civic management system for the Igbogbo Baiyeku Local Council (IBLCDA). This robust street registry platform digitizes the tracking and administration of Community Development Areas (CDAs), streamlining local governance and providing citizens with accessible, transparent street information.",
@@ -151,7 +164,7 @@ export const projects = [
     type: "personal",
   },
   {
-    id: "11",
+    id: "12",
     title: "Estantien - Luxury Real Estate Platform",
     description:
       "An exclusive real estate platform dedicated to high-end property discovery. Estantien offers discerning buyers a curated catalog of luxury homes, featuring advanced search filters, rich virtual tours, and a highly polished UI. The platform redefines property browsing by prioritizing elegance, speed, and personalized user journeys.",
@@ -163,7 +176,7 @@ export const projects = [
     type: "personal",
   },
   {
-    id: "12",
+    id: "13",
     title: "Kicks - Online Sneaker & Footwear Store",
     description:
       "A full-featured e-commerce storefront specializing in premium sneakers and athletic footwear. Kicks integrates secure state management via Redux with a visually striking, mobile-first design, ensuring a frictionless shopping journey from product discovery through to an optimized checkout process.",
@@ -175,7 +188,7 @@ export const projects = [
     type: "personal",
   },
   {
-    id: "13",
+    id: "14",
     title: "EDMOSS - Business Growth Consulting Landing Page",
     description:
       "Engineered a high-conversion landing page for EDMOSS, a premier African business consultancy firm. The digital gateway highlights the company’s authority in strategic growth and digital transformation, utilizing compelling copy and a highly optimized, responsive design to convert enterprise leads and build trust across the continent.",
