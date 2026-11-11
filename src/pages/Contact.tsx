@@ -84,11 +84,12 @@ const Contact = () => {
       {/* Hero */}
       <section className="pt-36 pb-16 md:pb-20 bg-gradient-to-b from-background to-card/50">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="mb-4 inline-block text-xs font-medium uppercase tracking-[0.22em] text-primary">Let’s talk</span>
+            <h1 className="mb-6 animate-fade-in-up">
               Let's Build Something <span className="text-gradient">Amazing</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground animate-fade-in" style={{ animationDelay: "200ms" }}>
+            <p className="text-base text-muted-foreground animate-fade-in md:text-xl" style={{ animationDelay: "200ms" }}>
               Ready to transform your ideas into reality? Get in touch with me and let's start the conversation.
             </p>
           </div>
@@ -98,47 +99,46 @@ const Contact = () => {
       {/* Contact Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-12">
-            {/* Contact Info */}
+          <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-3">
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
-                <p className="text-muted-foreground mb-6">I'm here to answer your questions and discuss how I can help bring your project to life.</p>
+                <h2 className="mb-4">Get in Touch</h2>
+                <p className="mb-6 text-muted-foreground">I'm here to answer your questions and discuss how I can help bring your project to life.</p>
               </div>
 
-              <Card className="p-6 bg-card border-border">
+              <Card className="border-border/60 bg-card/80 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 hover:border-primary/80">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-primary" />
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/15">
+                    <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Email</h3>
+                    <h3 className="mb-1 font-semibold text-foreground">Email</h3>
                     <p className="text-muted-foreground">joshuaonyeka2020@gmail.com</p>
                   </div>
                 </div>
               </Card>
 
-              <Card className="p-6 bg-card border-border">
+              <Card className="border-border/60 bg-card/80 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 hover:border-primary/80">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-primary" />
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/15">
+                    <Phone className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Availability</h3>
+                    <h3 className="mb-1 font-semibold text-foreground">Availability</h3>
                     <p className="text-muted-foreground">Open for projects</p>
                   </div>
                 </div>
               </Card>
 
-              <Card className="p-6 bg-card border-border">
+              <Card className="border-border/60 bg-card/80 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300 hover:border-primary/80">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-primary" />
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/15">
+                    <MapPin className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Location</h3>
+                    <h3 className="mb-1 font-semibold text-foreground">Location</h3>
                     <p className="text-muted-foreground">
-                      Remote/ Hybrid
+                      Remote / Hybrid
                       <br />
                       Available worldwide
                     </p>
@@ -147,24 +147,23 @@ const Contact = () => {
               </Card>
             </div>
 
-            {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card className="p-5 md:p-8 bg-card border-border">
+              <Card className="border border-border/60 bg-card/80 p-5 shadow-[0_25px_80px_rgba(0,0,0,0.12)] md:p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                     <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Your Name *</label>
+                      <label className="mb-2 block text-sm font-medium text-foreground">Your Name *</label>
                       <Input
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="John Doe"
                         required
-                        className="bg-background border-border"
+                        className="border-border bg-background/60"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Email Address *</label>
+                      <label className="mb-2 block text-sm font-medium text-foreground">Email Address *</label>
                       <Input
                         name="email"
                         type="email"
@@ -172,24 +171,24 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="john@example.com"
                         required
-                        className="bg-background border-border"
+                        className="border-border bg-background/60"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Company / Organization</label>
+                    <label className="mb-2 block text-sm font-medium text-foreground">Company / Organization</label>
                     <Input
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
                       placeholder="Your Company"
-                      className="bg-background border-border"
+                      className="border-border bg-background/60"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Project Details *</label>
+                    <label className="mb-2 block text-sm font-medium text-foreground">Project Details *</label>
                     <Textarea
                       name="message"
                       value={formData.message}
@@ -197,18 +196,13 @@ const Contact = () => {
                       placeholder="Tell me about your project, goals, and timeline..."
                       required
                       rows={8}
-                      className="bg-background border-border resize-none"
+                      className="resize-none border-border bg-background/60"
                     />
                   </div>
 
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 glow-border group"
-                    disabled={isSubmitting}
-                  >
+                  <Button type="submit" size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 glow-border group" disabled={isSubmitting}>
                     {isSubmitting ? "Sending..." : "Send Message"}
-                    <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </form>
               </Card>
@@ -220,11 +214,11 @@ const Contact = () => {
       {/* Final CTA */}
       <section className="py-20 bg-card/50">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="mb-4 text-3xl font-bold md:text-5xl">
               "The best time to start was yesterday. The next best time is <span className="text-gradient">now.</span>"
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground">Let's turn your vision into reality. I'm ready when you are.</p>
+            <p className="text-base text-muted-foreground md:text-xl">Let's turn your vision into reality. I'm ready when you are.</p>
           </div>
         </div>
       </section>

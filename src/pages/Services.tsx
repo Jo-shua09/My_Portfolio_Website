@@ -39,11 +39,12 @@ const Services = () => {
       {/* Hero */}
       <section className="pt-36 pb-16 md:pb-20 bg-gradient-to-b from-background to-card/50">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="mb-4 inline-block text-xs font-medium uppercase tracking-[0.22em] text-primary">What I do</span>
+            <h1 className="mb-6 animate-fade-in-up">
               My <span className="text-gradient">Services</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground animate-fade-in" style={{ animationDelay: "200ms" }}>
+            <p className="text-base text-muted-foreground animate-fade-in md:text-xl" style={{ animationDelay: "200ms" }}>
               Comprehensive software development services designed to transform your business and deliver measurable results through quality
               craftsmanship.
             </p>
@@ -108,14 +109,15 @@ const Services = () => {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 bg-card/50 overflow-hidden">
+      <section className="overflow-hidden bg-card/50 py-20">
         <div className="container mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="mb-3 inline-block text-xs font-medium uppercase tracking-[0.22em] text-primary">Stack</span>
+            <h2 className="mb-4">
               My <span className="text-gradient">Technology Stack</span>
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              I leverage the latest technologies to build robust, scalable solutions
+            <p className="mx-auto max-w-2xl text-base text-muted-foreground md:text-xl">
+              I leverage the latest technologies to build robust, scalable solutions.
             </p>
           </div>
 
@@ -162,16 +164,17 @@ const Services = () => {
       {/* Process */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="mb-16 text-center">
+            <span className="mb-3 inline-block text-xs font-medium uppercase tracking-[0.22em] text-primary">Process</span>
+            <h2 className="mb-4">
               My <span className="text-gradient">Development Process</span>
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              A proven methodology that ensures quality, efficiency, and transparency
+            <p className="mx-auto max-w-2xl text-base text-muted-foreground md:text-xl">
+              A proven methodology that ensures quality, efficiency, and transparency.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 step: "01",
@@ -194,9 +197,9 @@ const Services = () => {
                 description: "Deployment, testing, and ongoing maintenance to keep your application running smoothly.",
               },
             ].map((item, index) => (
-              <div key={index} className="relative">
-                <div className="text-6xl font-bold text-primary/10 mb-4">{item.step}</div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">{item.title}</h3>
+              <div key={index} className="rounded-3xl border border-border/60 bg-card/60 p-6 transition-all duration-300 hover:-translate-y-2 hover:border-primary/80">
+                <div className="mb-5 text-5xl font-bold text-primary/20">{item.step}</div>
+                <h3 className="mb-3 text-2xl font-bold text-foreground">{item.title}</h3>
                 <p className="text-muted-foreground">{item.description}</p>
               </div>
             ))}
