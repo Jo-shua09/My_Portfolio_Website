@@ -56,8 +56,8 @@ const Home = () => {
         <AnimatedBackground />
 
         <div className="container relative z-10 mx-auto px-6">
-          <div className="mx-auto md:mt-0 mt-16 max-w-5xl text-center">
-            <h1 className="mb-5 animate-fade-in-up leading-[0.9] text-foreground">
+          <div className="mx-auto md:mt-0 mt-32 max-w-5xl text-center">
+            <h1 className="mb-5 animate-fade-in-up leading-[0.9] text-xl md:text-2xl text-foreground">
               Elevating Ideas.
               <span className="block text-gradient">Building Tomorrow.</span>
             </h1>
