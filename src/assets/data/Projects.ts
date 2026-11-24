@@ -12,6 +12,10 @@ import boukar from "@/assets/images/projects/boukar.png";
 import benodynamic from "@/assets/images/projects/benodynamic.png";
 import enforma from "@/assets/images/projects/enforma.png";
 import verdant from "@/assets/images/projects/verdant.png";
+import nexa1 from "@/assets/images/projects/nexa-1.png";
+import nexa2 from "@/assets/images/projects/nexa-2.png";
+import nexa3 from "@/assets/images/projects/nexa-3.png";
+import nexa4 from "@/assets/images/projects/nexa-4.png";
 import streamview1 from "@/assets/images/projects/streamview-1.png";
 import streamview2 from "@/assets/images/projects/streamview-2.png";
 import streamview3 from "@/assets/images/projects/streamview-3.png";
@@ -204,7 +208,19 @@ export const projects = [
 export const mobileProjects = [
   {
     id: "m1",
-    title: "StreamView 🎬",
+    title: "Nexa - Full-Stack E-Commerce Mobile App",
+    description:
+      "A production-ready e-commerce mobile application engineered with Flutter, Riverpod, and Firebase. Built with a clean feature-first architecture, Nexa features secure Firebase Authentication, real-time Cloud Firestore product catalogs, live cart synchronization with automated VAT and shipping calculations, seamless checkout, and ongoing/completed order tracking with user reviews.",
+    images: [nexa1, nexa2, nexa3, nexa4],
+    tags: ["Flutter", "Dart", "Riverpod", "Firebase Auth", "Cloud Firestore"],
+    category: "Mobile Application",
+    live: "",
+    github: "https://github.com/Jo-shua09/Nexa-E-Commerce-App",
+    type: "personal",
+  },
+  {
+    id: "m2",
+    title: "StreamView",
     description:
       "StreamView is a modern, feature-rich movie streaming and discovery application built with Flutter and powered by GetX for robust state management and routing. It consumes the OMDb API to dynamically fetch, search, and display comprehensive movie data including plots, cast, ratings, and posters.",
     images: [streamview1, streamview2, streamview3, streamview4, streamview5, streamview6],
