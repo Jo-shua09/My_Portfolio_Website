@@ -56,11 +56,7 @@ const Home = () => {
         <AnimatedBackground />
 
         <div className="container relative z-10 mx-auto px-6">
-          <div className="mx-auto max-w-5xl text-center">
-            <div className="mb-6 inline-flex items-center justify-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.24em] text-primary animate-fade-in">
-              Architecting digital futures
-            </div>
-
+          <div className="mx-auto md:mt-0 mt-16 max-w-5xl text-center">
             <h1 className="mb-5 animate-fade-in-up leading-[0.9] text-foreground">
               Elevating Ideas.
               <span className="block text-gradient">Building Tomorrow.</span>
@@ -85,8 +81,8 @@ const Home = () => {
 
             <div className="mt-12 grid gap-4 sm:grid-cols-3">
               {[
-                { value: "5+", label: "Years building" },
-                { value: "25+", label: "Projects shipped" },
+                { value: "4+", label: "Years building" },
+                { value: "20+", label: "Projects shipped" },
                 { value: "100%", label: "Focus on quality" },
               ].map((stat) => (
                 <div key={stat.label} className="rounded-2xl border border-border/60 bg-card/50 p-4 backdrop-blur-sm">
