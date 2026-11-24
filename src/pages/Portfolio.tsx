@@ -120,7 +120,6 @@ const Portfolio = () => {
                   className="gap-2 border-border hover:border-primary"
                 >
                   <ChevronLeft className="h-4 w-4" />
-                  Prev
                 </Button>
                 <div className="flex items-center gap-2 rounded-full border border-border bg-card/50 px-2 py-1.5">
                   {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
@@ -129,7 +128,9 @@ const Portfolio = () => {
                       type="button"
                       onClick={() => setCurrentPage(page)}
                       className={`h-9 w-9 rounded-full text-sm font-medium transition-all ${
-                        currentPage === page ? "bg-primary text-primary-foreground shadow-md" : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                        currentPage === page
+                          ? "bg-primary text-primary-foreground shadow-md"
+                          : "text-muted-foreground hover:text-foreground hover:bg-secondary"
                       }`}
                     >
                       {page}
@@ -143,7 +144,6 @@ const Portfolio = () => {
                   disabled={currentPage === totalPages}
                   className="gap-2 border-border hover:border-primary"
                 >
-                  Next
                   <ChevronRight className="h-4 w-4" />
                 </Button>
               </div>
