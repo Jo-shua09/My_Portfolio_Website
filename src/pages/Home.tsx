@@ -57,18 +57,22 @@ const Home = () => {
 
         <div className="container relative z-10 mx-auto px-6">
           <div className="mx-auto md:mt-0 mt-32 max-w-5xl text-center">
-            <h1 className="mb-5 animate-fade-in-up leading-[0.9] text-xl md:text-2xl text-foreground">
+            <h1 className="mb-5 animate-fade-in-up leading-[0.9] text-2xl md:text-3xl text-foreground">
               Elevating Ideas.
               <span className="block text-gradient">Building Tomorrow.</span>
             </h1>
 
             <p className="mx-auto mb-10 max-w-3xl text-base text-muted-foreground animate-fade-in md:text-xl" style={{ animationDelay: "200ms" }}>
-              I design and build high-converting digital products that blend product strategy, clean engineering, and premium UX for brands that want to
-              scale with confidence.
+              I design and build high-converting digital products that blend product strategy, clean engineering, and premium UX for brands that want
+              to scale with confidence.
             </p>
 
             <div className="flex flex-col justify-center gap-4 sm:flex-row animate-fade-in" style={{ animationDelay: "400ms" }}>
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 glow-border group shadow-[0_20px_60px_rgba(255,255,255,0.12)]">
+              <Button
+                asChild
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 glow-border group shadow-[0_20px_60px_rgba(255,255,255,0.12)]"
+              >
                 <Link to="/contact">
                   Start Your Project
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

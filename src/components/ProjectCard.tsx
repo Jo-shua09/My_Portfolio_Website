@@ -72,7 +72,7 @@ const ProjectCard = ({ title, description, image, tags, category, live, github, 
           </div>
         </div>
 
-        <div className="p-6 w-full">
+        <div className="p-4 md:p-6 w-full">
           <div className="flex items-center gap-2 mb-2">
             <div className="text-xs font-semibold font-mono text-primary uppercase tracking-wider">{category}</div>
             {type && (
